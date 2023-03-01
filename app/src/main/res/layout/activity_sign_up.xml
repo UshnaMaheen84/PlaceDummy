@@ -199,14 +199,6 @@
                 android:orientation="horizontal"
                 android:padding="7dp">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:padding="8dp"
-                    android:src="@drawable/ic_baseline_call_24">
-
-                </ImageView>
 
                 <com.ak.ui.CountryCodePicker
                     android:id="@+id/ccp_phone"
@@ -216,7 +208,7 @@
                     android:gravity="center"
                     app:arrowSize="20dp"
                     app:contentColor="@color/black"
-                    app:defaultNameCode="in"
+                    app:defaultNameCode="pk"
                     app:excludedCountries="ad,ae"
                     app:fontFamily="@font/montserrat_medium"
                     app:showArrowDown="true"
