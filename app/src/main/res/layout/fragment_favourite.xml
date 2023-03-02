@@ -27,7 +27,7 @@
                 android:layout_height="match_parent"
                 android:text="@string/hello_blank_fragment"
                 tools:itemCount="6"
-                tools:listitem="@layout/fav_item_view"/>
+                tools:listitem="@layout/favourite_item_view"/>
         </LinearLayout>
     </ScrollView>
 
