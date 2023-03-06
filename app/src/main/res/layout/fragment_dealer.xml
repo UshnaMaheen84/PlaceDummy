@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DealerFragment">
+    tools:context=".fragments.DealerFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,10 +16,13 @@
             <LinearLayout
                 android:weightSum="100"
                 android:orientation="horizontal"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/gradient_background"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="18dp">
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:paddingBottom="50dp"
+                android:paddingTop="20dp">
 
 
                 <ImageView
@@ -50,7 +53,7 @@
                     android:layout_margin="10dp"
                     android:padding="8dp"
                     android:background="@drawable/image_background"
-                    android:src="@drawable/filter"
+                    android:src="@drawable/setting_5"
                     app:tint="@color/colorPrimary">
 
                 </ImageView>

@@ -3,32 +3,33 @@
     <item
         android:id="@+id/navigation_home"
         android:enabled="true"
-        android:icon="@drawable/icon_home"
-        android:title="Home" />
+        android:icon="@drawable/home_icon"
+        android:title=" "
+        />
 
     <item
         android:id="@+id/navigation_dealer"
         android:enabled="true"
-        android:icon="@drawable/icon_dealer"
-        android:title="Dealer" />
+        android:icon="@drawable/dealer_icon"
+        android:title=" " />
 
     <item
         android:id="@+id/navigation_property"
         android:enabled="true"
-        android:icon="@drawable/icon_property"
-        android:title="Property" />
+        android:icon="@drawable/property_icon"
+        android:title=" " />
 
     <item
         android:id="@+id/navigation_favorite"
         android:enabled="true"
-        android:icon="@drawable/icon_fav"
-        android:title="Favorite" />
+        android:icon="@drawable/fav_icon"
+        android:title=" " />
 
     <item
         android:id="@+id/navigation_profile"
         android:enabled="true"
-        android:icon="@drawable/icon_profile"
-        android:title="Profile" />
+        android:icon="@drawable/profile_icon"
+        android:title=" " />
 
 
 </menu>

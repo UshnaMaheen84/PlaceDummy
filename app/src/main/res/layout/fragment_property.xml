@@ -4,8 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/background2"
     android:layout_height="match_parent"
     tools:context=".fragments.PropertyFragment">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,10 +23,110 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
+                <RelativeLayout
+                    android:id="@+id/start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_background"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/find_place"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Find your place in"
+                        android:textColor="@color/white"
+                        android:textSize="14sp">
+
+                    </TextView>
+
+                    <LinearLayout
+                        android:id="@+id/layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/find_place"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:src="@drawable/location_on_24">
+
+                        </ImageView>
+
+                        <TextView
+                            android:id="@+id/your_loc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:text="Karachi,Pakistan"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold">
+
+                        </TextView>
+
+                        <ImageView
+                            android:id="@+id/arrow_down"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_margin="8dp"
+                            android:src="@drawable/arrow_down_24">
+
+                        </ImageView>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/search_layout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/layout"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="18dp"
+                        android:background="@drawable/button_background2">
+
+
+                        <androidx.appcompat.widget.SearchView
+                            android:id="@+id/searchview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:elevation="8dp"
+                            android:iconifiedByDefault="false"
+                            android:queryHint="Search area, city, projects" />
+
+                        <ImageView
+                            android:id="@+id/filter"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:padding="8dp"
+                            android:src="@drawable/filter_list_24">
+
+                        </ImageView>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:layout_margin="12dp"
                     android:padding="8dp"
                     android:text="Location"
                     android:textColor="@color/black"
@@ -51,7 +153,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:layout_margin="12dp"
                     android:padding="8dp"
                     android:text="Price Range"
                     android:textColor="@color/black"
@@ -160,6 +262,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
+                            android:layout_gravity="center"
                             android:layout_marginStart="18dp"
                             android:gravity="center"
                             android:padding="8dp"
@@ -180,7 +283,7 @@
                             android:padding="8dp">
 
                             <ImageView
-                                android:id="@+id/filter"
+                                android:id="@+id/sort"
                                 android:layout_width="24dp"
                                 android:layout_height="24dp"
                                 android:layout_alignParentLeft="true"
@@ -191,12 +294,10 @@
                             </ImageView>
 
                             <TextView
-                                android:id="@+id/sort"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
                                 android:layout_marginStart="8dp"
-                                android:padding="8dp"
                                 android:text="sort"
                                 android:textColor="@color/black"
                                 android:textSize="18sp"
@@ -213,17 +314,16 @@
                         android:layout_height="match_parent"
                         android:layout_margin="8dp" />
 
-                    <Button
+                    <androidx.appcompat.widget.AppCompatButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="16dp"
-                        android:background="@drawable/background"
+                        android:background="@drawable/button_background"
                         android:padding="8dp"
                         android:text="Show moore result"
                         android:textAllCaps="false"
-                        android:textColor="@color/white">
+                        android:textColor="@color/white"/>
 
-                    </Button>
 
                 </LinearLayout>
 

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:background="@color/white"
     android:layout_height="match_parent"
-    tools:context=".SignUp">
+    >
 
     <ScrollView
         android:layout_width="match_parent"
@@ -251,8 +251,8 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/button_background"
-                android:padding="8dp"
                 android:elevation="10dp"
+                android:padding="8dp"
                 android:text="Create Account"
                 android:textColor="@color/white">
 

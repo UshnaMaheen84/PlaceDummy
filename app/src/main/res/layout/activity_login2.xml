@@ -19,7 +19,7 @@
                 android:id="@+id/lkm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/gradient_background"
                 android:padding="8dp">
 
                 <ImageView
@@ -52,8 +52,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/text1"
                     android:layout_marginStart="8dp"
-                    android:paddingStart="8dp"
                     android:layout_marginBottom="16dp"
+                    android:paddingStart="8dp"
                     android:paddingEnd="8dp"
                     android:text="Please enter your username and password to login"
                     android:textColor="@color/white"
@@ -69,9 +69,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/lkm"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="18dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginEnd="18dp"
                 android:layout_marginBottom="8dp"
                 android:padding="8dp"
                 android:text="Username"
@@ -86,41 +86,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_below="@id/username"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
                 android:background="@drawable/background"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:padding="7dp">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:padding="8dp"
-                    android:src="@drawable/user">
 
-                </ImageView>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                <EditText
+                    android:id="@+id/et_username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:boxStrokeWidth="2dp">
+                    android:layout_marginStart="8dp"
+                    android:background="@color/grey"
+                    android:drawableLeft="@drawable/frame"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/colorPrimary"
+                    android:hint="username"
+                    android:padding="8dp">
 
-                    <EditText
-                        android:id="@+id/et_username"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:background="@color/grey"
-                        android:hint="username"
-                        android:padding="8dp">
+                </EditText>
 
-                    </EditText>
-
-
-                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 
@@ -129,7 +116,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/layout1"
-                android:layout_margin="8dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
@@ -142,26 +129,16 @@
 
             <LinearLayout
                 android:id="@+id/layout2"
-
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_below="@id/password"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/background"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:padding="7dp">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:padding="8dp"
-                    android:src="@drawable/key">
-
-                </ImageView>
 
 
                 <EditText
@@ -169,6 +146,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
+                    android:background="@color/grey"
+                    android:drawableLeft="@drawable/key2"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/colorPrimary"
                     android:hint="password"
                     android:inputType="textPassword"
                     android:padding="8dp">
@@ -179,38 +160,53 @@
             </LinearLayout>
 
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/login_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/layout2"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="18dp"
                 android:layout_marginTop="18dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginEnd="18dp"
                 android:layout_marginBottom="1dp"
-                android:background="@drawable/button_bg"
+                android:background="@drawable/button_background"
                 android:padding="8dp"
                 android:text="Log In"
                 android:textAllCaps="false"
                 android:textColor="@color/white">
 
-            </Button>
+            </androidx.appcompat.widget.AppCompatButton>
 
-            <TextView
-                android:id="@+id/forgot_password"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_password22"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:layout_below="@id/login_btn"
-                android:layout_centerInParent="true"
-                android:layout_marginStart="1dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginEnd="1dp"
-                android:layout_marginBottom="1dp"
-                android:padding="8dp"
-                android:text="forgot password?"
-                android:textSize="12sp">
+                android:layout_margin="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="18dp"
+                app:boxStrokeColor="@color/colorPrimaryDark"
+                app:boxStrokeWidth="2dp">
 
-            </TextView>
+                <EditText
+                    android:id="@+id/et_password2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+
+                    android:drawableLeft="@drawable/key2"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/colorPrimary"
+                    android:hint="password"
+                    android:inputType="textPassword"
+                    android:padding="8dp">
+
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
 
 
         </RelativeLayout>

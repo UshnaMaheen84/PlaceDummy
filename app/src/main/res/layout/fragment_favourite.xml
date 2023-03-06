@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/background2"
-    tools:context=".FavouriteFragment">
+    tools:context=".fragments.FavouriteFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,16 +17,19 @@
             android:layout_margin="10dp">
 
             <androidx.appcompat.widget.SearchView
+                android:id="@+id/fav_searchView"
+                android:background="@drawable/button_background2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_background2"
+                android:iconifiedByDefault="false"
+                android:queryHint="Search Favorite"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="5dp"/>
+
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/hello_blank_fragment"
                 tools:itemCount="6"
                 tools:listitem="@layout/favourite_item_view"/>
         </LinearLayout>

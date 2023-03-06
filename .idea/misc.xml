@@ -24,6 +24,9 @@
         <entry key="..\:/Users/Ushna/Desktop/New folder/New folder/app/src/main/res/drawable-v24/layout_background.xml" value="0.1905" />
         <entry key="..\:/Users/Ushna/Desktop/New folder/New folder/app/src/main/res/drawable/background.xml" value="0.1905" />
         <entry key="..\:/Users/Ushna/Desktop/New folder/New folder/app/src/main/res/drawable/background_3.xml" value="0.12" />
+        <entry key="..\:/Users/Ushna/Desktop/New folder/New folder/app/src/main/res/drawable/btn_bg_selector.xml" value="0.194" />
+        <entry key="..\:/Users/Ushna/Desktop/New folder/New folder/app/src/main/res/drawable/button_background.xml" value="0.194" />
+        <entry key="..\:/Users/Ushna/Desktop/New folder/New folder/app/src/main/res/drawable/button_background2.xml" value="0.194" />
         <entry key="..\:/Users/Ushna/Desktop/New folder/New folder/app/src/main/res/drawable/circle_background.xml" value="0.1905" />
         <entry key="..\:/Users/Ushna/Desktop/New folder/New folder/app/src/main/res/drawable/circle_shape.xml" value="0.1905" />
         <entry key="..\:/Users/Ushna/Desktop/New folder/New folder/app/src/main/res/drawable/gradient_background.xml" value="0.1905" />
@@ -32,12 +35,16 @@
         <entry key="..\:/Users/Ushna/Desktop/New folder/New folder/app/src/main/res/drawable/icon_fav.xml" value="0.1815" />
         <entry key="..\:/Users/Ushna/Desktop/New folder/New folder/app/src/main/res/drawable/icon_profile.xml" value="0.1815" />
         <entry key="..\:/Users/Ushna/Desktop/New folder/New folder/app/src/main/res/drawable/icon_property.xml" value="0.1815" />
+        <entry key="..\:/Users/Ushna/Desktop/New folder/New folder/app/src/main/res/drawable/layout_background.xml" value="0.194" />
         <entry key="..\:/Users/Ushna/Desktop/New folder/New folder/app/src/main/res/layout/activity_SignUp.xml" value="0.2" />
         <entry key="..\:/Users/Ushna/Desktop/New folder/New folder/app/src/main/res/layout/activity_log_in.xml" value="0.25" />
         <entry key="..\:/Users/Ushna/Desktop/New folder/New folder/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/Ushna/Desktop/New folder/New folder/app/src/main/res/layout/activity_login2.xml" value="0.2222222222222222" />
         <entry key="..\:/Users/Ushna/Desktop/New folder/New folder/app/src/main/res/layout/activity_main.xml" value="0.2222222222222222" />
         <entry key="..\:/Users/Ushna/Desktop/New folder/New folder/app/src/main/res/layout/activity_sign_up.xml" value="0.2" />
         <entry key="..\:/Users/Ushna/Desktop/New folder/New folder/app/src/main/res/layout/activity_signup.xml" value="0.2222222222222222" />
+        <entry key="..\:/Users/Ushna/Desktop/New folder/New folder/app/src/main/res/layout/activity_signup2.xml" value="0.2222222222222222" />
+        <entry key="..\:/Users/Ushna/Desktop/New folder/New folder/app/src/main/res/layout/activity_splash_screen.xml" value="0.2222222222222222" />
         <entry key="..\:/Users/Ushna/Desktop/New folder/New folder/app/src/main/res/layout/dealer_item_view.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/Ushna/Desktop/New folder/New folder/app/src/main/res/layout/fav_item_view.xml" value="0.25" />
         <entry key="..\:/Users/Ushna/Desktop/New folder/New folder/app/src/main/res/layout/fragment_dealer.xml" value="0.264" />
