@@ -21,7 +21,7 @@
                 android:id="@+id/start"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/gradient_background"
+                android:background="@drawable/rectangle_21"
                 android:padding="10dp">
 
                 <TextView
@@ -142,7 +142,7 @@
 
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/card_category"
+                    android:id="@+id/card_category_btn_press"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
@@ -153,14 +153,14 @@
                     <LinearLayout
                         android:id="@+id/layout_category"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:background="@color/grey">
 
                         <Button
-                            android:id="@+id/text_category"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:background="@drawable/btn_bg_selector"
+                            android:background="@drawable/button_background"
                             android:gravity="center"
                             android:text="Category"
                             android:textColor="@color/white"
@@ -171,16 +171,49 @@
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_category_btn_not_press"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="100dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/layout_category2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/grey">
+
+                        <Button
+                            android:id="@+id/text_category"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/btn_bg_selector"
+                            android:gravity="center"
+                            android:text="Category"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold">
+
+                        </Button>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/card_budget"
+                    android:id="@+id/card_budget_btn_press"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:backgroundTint="@color/grey"
                     android:elevation="8dp"
-                    app:cardCornerRadius="100dp">
+                    app:cardCornerRadius="100dp"
+                    android:visibility="gone">
 
                     <LinearLayout
                         android:id="@+id/layout_budget"
@@ -190,6 +223,37 @@
 
                         <Button
                             android:id="@+id/text_budget"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Budget"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:textStyle="bold">
+
+                        </Button>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_budget_btn_not_press"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/grey"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="100dp">
+
+                    <LinearLayout
+                        android:id="@+id/layout_budget2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/grey">
+
+                        <Button
+                            android:id="@+id/text_budget2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -206,7 +270,41 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/card_project"
+                    android:id="@+id/card_project_btn_press"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/grey"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="100dp"
+                    android:visibility="gone">
+
+
+                    <LinearLayout
+                        android:id="@+id/layout_project"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/grey"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/button_background"
+                            android:gravity="center"
+                            android:text="Projects"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:textStyle="bold">
+
+                        </Button>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_project_btn_not_press"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
@@ -217,17 +315,18 @@
 
 
                     <LinearLayout
-                        android:id="@+id/layout_project"
+                        android:id="@+id/layout_project2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/grey">
+                        android:background="@color/grey"
+                        android:orientation="vertical">
 
                         <Button
                             android:id="@+id/text_project"
                             android:layout_width="match_parent"
-                            android:background="@drawable/btn_bg_selector"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
+                            android:background="@drawable/btn_bg_selector"
                             android:gravity="center"
                             android:text="Projects"
                             android:textColor="@color/black"

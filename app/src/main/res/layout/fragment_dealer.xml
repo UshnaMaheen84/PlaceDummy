@@ -16,7 +16,7 @@
             <LinearLayout
                 android:weightSum="100"
                 android:orientation="horizontal"
-                android:background="@drawable/gradient_background"
+                android:background="@drawable/rectangle_21"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingStart="18dp"

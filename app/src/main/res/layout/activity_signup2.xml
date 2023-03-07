@@ -18,7 +18,7 @@
                 android:id="@+id/xyz"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/gradient_background"
+                android:background="@drawable/rectangle_21"
                 android:padding="12dp">
 
                 <ImageView
@@ -97,7 +97,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:background="@color/grey"
-                    android:drawableLeft="@drawable/frame"
+                    android:drawableLeft="@drawable/briefcase"
                     android:drawablePadding="8dp"
                     android:hint="Company"
                     android:padding="8dp">

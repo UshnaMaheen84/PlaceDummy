@@ -27,7 +27,7 @@
                     android:id="@+id/start"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/gradient_background"
+                    android:background="@drawable/rectangle_21"
                     android:padding="10dp">
 
                     <TextView
@@ -115,7 +115,7 @@
                             android:layout_marginEnd="8dp"
                             android:layout_marginBottom="8dp"
                             android:padding="8dp"
-                            android:src="@drawable/filter_list_24">
+                            android:src="@drawable/sort">
 
                         </ImageView>
                     </RelativeLayout>
@@ -314,19 +314,19 @@
                         android:layout_height="match_parent"
                         android:layout_margin="8dp" />
 
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="16dp"
-                        android:background="@drawable/button_background"
-                        android:padding="8dp"
-                        android:text="Show moore result"
-                        android:textAllCaps="false"
-                        android:textColor="@color/white"/>
 
 
                 </LinearLayout>
 
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/button_background"
+                    android:padding="8dp"
+                    android:text="Show moore result"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"/>
             </LinearLayout>
         </ScrollView>
     </RelativeLayout>

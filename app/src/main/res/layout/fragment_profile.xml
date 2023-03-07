@@ -17,6 +17,7 @@
             android:orientation="vertical">
 
             <RelativeLayout
+                android:background="@drawable/rectangle_21"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -88,9 +89,10 @@
                         android:layout_marginEnd="15dp"
                         android:background="@drawable/image_background"
                         android:elevation="10dp"
-                        android:tint="@color/colorPrimary"
                         android:padding="5dp"
-                        android:src="@drawable/user" />
+                        android:src="@drawable/user"
+                        app:tint="@color/colorPrimary"
+                        />
 
                     <TextView
                         android:layout_width="match_parent"

@@ -19,7 +19,7 @@
                 android:id="@+id/lkm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/gradient_background"
+                android:background="@drawable/rectangle_21"
                 android:padding="8dp">
 
                 <ImageView
@@ -176,37 +176,6 @@
                 android:textColor="@color/white">
 
             </androidx.appcompat.widget.AppCompatButton>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/et_password22"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_below="@id/login_btn"
-                android:layout_margin="18dp"
-                android:layout_marginStart="18dp"
-                android:layout_marginTop="18dp"
-                android:layout_marginEnd="18dp"
-                android:layout_marginBottom="18dp"
-                app:boxStrokeColor="@color/colorPrimaryDark"
-                app:boxStrokeWidth="2dp">
-
-                <EditText
-                    android:id="@+id/et_password2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-
-                    android:drawableLeft="@drawable/key2"
-                    android:drawablePadding="8dp"
-                    android:drawableTint="@color/colorPrimary"
-                    android:hint="password"
-                    android:inputType="textPassword"
-                    android:padding="8dp">
-
-                </EditText>
-
-            </com.google.android.material.textfield.TextInputLayout>
 
 
         </RelativeLayout>
