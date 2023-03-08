@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background2"
     tools:context=".LogIn">
 
     <ScrollView
@@ -84,7 +84,7 @@
             <LinearLayout
                 android:id="@+id/layout1"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="55dp"
                 android:layout_below="@id/username"
                 android:layout_marginStart="18dp"
                 android:layout_marginEnd="18dp"
@@ -99,7 +99,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:background="@color/grey"
+                    android:background="@color/color_editText"
                     android:drawableLeft="@drawable/frame"
                     android:drawablePadding="8dp"
                     android:drawableTint="@color/colorPrimary"
@@ -130,7 +130,7 @@
             <LinearLayout
                 android:id="@+id/layout2"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="55dp"
                 android:layout_below="@id/password"
                 android:layout_marginStart="18dp"
                 android:layout_marginEnd="18dp"
@@ -146,7 +146,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:background="@color/grey"
+                    android:background="@color/color_editText"
                     android:drawableLeft="@drawable/key2"
                     android:drawablePadding="8dp"
                     android:drawableTint="@color/colorPrimary"
@@ -163,7 +163,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/login_btn"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:layout_below="@id/layout2"
                 android:layout_marginStart="18dp"
                 android:layout_marginTop="18dp"

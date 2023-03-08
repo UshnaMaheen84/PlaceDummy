@@ -91,12 +91,12 @@
                         android:background="@drawable/button_background2">
 
 
-                        <androidx.appcompat.widget.SearchView
+                        <SearchView
                             android:id="@+id/searchview"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
-                            android:layout_marginStart="15dp"
+                            android:layout_marginStart="5dp"
                             android:layout_marginTop="15dp"
                             android:layout_marginEnd="15dp"
                             android:layout_marginBottom="15dp"
@@ -201,12 +201,14 @@
                         app:cardCornerRadius="100dp">
 
                         <TextView
+                            android:id="@+id/text_hold"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="50dp"
                             android:layout_gravity="center"
                             android:gravity="center"
+                            android:background="@drawable/button_background"
                             android:text="Hold"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="16sp"
                             android:textStyle="bold">
 
@@ -224,10 +226,12 @@
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="50dp"
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:text="Sold"
+                            android:background="@color/white"
+                            android:id="@+id/text_sold"
                             android:textColor="@color/black"
                             android:textSize="16sp"
                             android:textStyle="bold">

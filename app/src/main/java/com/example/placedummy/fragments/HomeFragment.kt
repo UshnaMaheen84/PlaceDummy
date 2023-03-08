@@ -19,17 +19,6 @@ import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.fragment.app.Fragment
 
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [HomeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class HomeFragment : Fragment() {
      override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,13 +38,12 @@ class HomeFragment : Fragment() {
 
         val gridcategory= view.findViewById<GridLayout>(com.example.placedummy.R.id.grid_category)
         val btn_category= view.findViewById<Button>(com.example.placedummy.R.id.text_category)
-        val category_btn_press= view.findViewById<androidx.cardview.widget.CardView>(com.example.placedummy.R.id.card_category_btn_press)
-        val category_btn_not_press= view.findViewById<androidx.cardview.widget.CardView>(com.example.placedummy.R.id.card_category_btn_not_press)
 
         val gridproject= view.findViewById<GridLayout>(com.example.placedummy.R.id.grid_project)
         val btn_project= view.findViewById<Button>(com.example.placedummy.R.id.text_project)
-        val project_btn_press= view.findViewById<androidx.cardview.widget.CardView>(com.example.placedummy.R.id.card_project_btn_press)
-        val project_btn_not_press= view.findViewById<androidx.cardview.widget.CardView>(com.example.placedummy.R.id.card_project_btn_not_press)
+
+        val btn_budget= view.findViewById<Button>(com.example.placedummy.R.id.text_budget)
+        val layout_budget= view.findViewById<LinearLayout>(com.example.placedummy.R.id.budget_layout)
 
 
 
@@ -63,12 +51,31 @@ class HomeFragment : Fragment() {
 
             gridcategory.visibility = View.VISIBLE
             gridproject.visibility = View.GONE
+            layout_budget.visibility = View.GONE
 
-            category_btn_press.visibility=View.VISIBLE
-            category_btn_not_press.visibility=View.GONE
+            btn_category.setBackgroundResource(com.example.placedummy.R.drawable.button_background)
+            btn_project.setBackgroundResource(com.example.placedummy.R.drawable.btn_bg_selector)
+            btn_budget.setBackgroundResource(com.example.placedummy.R.drawable.btn_bg_selector)
 
-            project_btn_not_press.visibility=View.VISIBLE
-            project_btn_press.visibility=View.GONE
+            btn_category.setTextColor(Color.WHITE)
+            btn_project.setTextColor(Color.BLACK)
+            btn_budget.setTextColor(Color.BLACK)
+
+
+        }
+        btn_budget.setOnClickListener {
+
+            layout_budget.visibility = View.VISIBLE
+            gridcategory.visibility = View.GONE
+            gridproject.visibility = View.GONE
+
+            btn_budget.setBackgroundResource(com.example.placedummy.R.drawable.button_background)
+            btn_category.setBackgroundResource(com.example.placedummy.R.drawable.btn_bg_selector)
+            btn_project.setBackgroundResource(com.example.placedummy.R.drawable.btn_bg_selector)
+
+            btn_budget.setTextColor(Color.WHITE)
+            btn_category.setTextColor(Color.BLACK)
+            btn_project.setTextColor(Color.BLACK)
 
 
         }
@@ -77,12 +84,15 @@ class HomeFragment : Fragment() {
 
             gridproject.visibility = View.VISIBLE
             gridcategory.visibility = View.GONE
+            layout_budget.visibility = View.GONE
 
-            category_btn_not_press.visibility=View.VISIBLE
-            category_btn_press.visibility=View.GONE
+            btn_project.setBackgroundResource(com.example.placedummy.R.drawable.button_background)
+            btn_category.setBackgroundResource(com.example.placedummy.R.drawable.btn_bg_selector)
+            btn_budget.setBackgroundResource(com.example.placedummy.R.drawable.btn_bg_selector)
 
-            project_btn_press.visibility=View.VISIBLE
-            project_btn_not_press.visibility=View.GONE
+            btn_project.setTextColor(Color.WHITE)
+            btn_category.setTextColor(Color.BLACK)
+            btn_budget.setTextColor(Color.BLACK)
 
         }
         return view

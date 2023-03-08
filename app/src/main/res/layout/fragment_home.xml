@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background2"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ScrollView
@@ -12,7 +13,6 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -85,10 +85,10 @@
                     android:background="@drawable/button_background2">
 
 
-                    <androidx.appcompat.widget.SearchView
+                    <SearchView
                         android:id="@+id/searchview"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="45dp"
                         android:layout_alignParentStart="true"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="15dp"
@@ -142,7 +142,7 @@
 
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/card_category_btn_press"
+                    android:id="@+id/card_category_btn"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
@@ -157,6 +157,7 @@
                         android:background="@color/grey">
 
                         <Button
+                            android:id="@+id/text_category"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -171,41 +172,9 @@
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/card_category_btn_not_press"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:layout_weight="1"
-                    android:elevation="8dp"
-                    app:cardCornerRadius="100dp"
-                    android:visibility="gone">
-
-                    <LinearLayout
-                        android:id="@+id/layout_category2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/grey">
-
-                        <Button
-                            android:id="@+id/text_category"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:background="@drawable/btn_bg_selector"
-                            android:gravity="center"
-                            android:text="Category"
-                            android:textColor="@color/black"
-                            android:textSize="12sp"
-                            android:textStyle="bold">
-
-                        </Button>
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/card_budget_btn_press"
+                    android:id="@+id/card_budget_btn"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
@@ -213,7 +182,7 @@
                     android:backgroundTint="@color/grey"
                     android:elevation="8dp"
                     app:cardCornerRadius="100dp"
-                    android:visibility="gone">
+                    android:visibility="visible">
 
                     <LinearLayout
                         android:id="@+id/layout_budget"
@@ -227,38 +196,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center"
-                            android:text="Budget"
-                            android:textColor="@color/white"
-                            android:textSize="12sp"
-                            android:textStyle="bold">
-
-                        </Button>
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/card_budget_btn_not_press"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/grey"
-                    android:elevation="8dp"
-                    app:cardCornerRadius="100dp">
-
-                    <LinearLayout
-                        android:id="@+id/layout_budget2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/grey">
-
-                        <Button
-                            android:id="@+id/text_budget2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
                             android:background="@drawable/btn_bg_selector"
-                            android:gravity="center"
                             android:text="Budget"
                             android:textColor="@color/black"
                             android:textSize="12sp"
@@ -270,7 +208,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/card_project_btn_press"
+                    android:id="@+id/card_project_btn"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
@@ -278,44 +216,11 @@
                     android:backgroundTint="@color/grey"
                     android:elevation="8dp"
                     app:cardCornerRadius="100dp"
-                    android:visibility="gone">
+                    android:visibility="visible">
 
 
                     <LinearLayout
                         android:id="@+id/layout_project"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/grey"
-                        android:orientation="vertical">
-
-                        <Button
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:background="@drawable/button_background"
-                            android:gravity="center"
-                            android:text="Projects"
-                            android:textColor="@color/white"
-                            android:textSize="12sp"
-                            android:textStyle="bold">
-
-                        </Button>
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/card_project_btn_not_press"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/grey"
-                    android:elevation="8dp"
-                    app:cardCornerRadius="100dp">
-
-
-                    <LinearLayout
-                        android:id="@+id/layout_project2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/grey"
@@ -353,14 +258,14 @@
                 android:alignmentMode="alignMargins"
                 android:columnCount="2"
                 android:columnOrderPreserved="false"
-                android:padding="15dp"
+                android:padding="2dp"
                 android:visibility="visible">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cv_plots"
 
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_margin="10dp"
                     android:elevation="50dp"
                     app:cardBackgroundColor="@color/white"
@@ -378,7 +283,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@drawable/plots"
-                            app:tint="@color/colorPrimary" />
+                            app:tint="#878787" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -386,8 +291,7 @@
                             android:layout_marginTop="8dp"
                             android:text="Plots"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
-                            android:textStyle="bold">
+                            android:textSize="16sp">
 
                         </TextView>
                     </LinearLayout>
@@ -396,8 +300,8 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cv_villas"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_margin="10dp"
                     android:elevation="50dp"
                     app:cardBackgroundColor="@color/white"
@@ -415,7 +319,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@drawable/home_work"
-                            app:tint="@color/colorPrimary" />
+                            app:tint="#878787" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -423,8 +327,7 @@
                             android:layout_marginTop="8dp"
                             android:text="Villas"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
-                            android:textStyle="bold">
+                            android:textSize="16sp">
 
                         </TextView>
                     </LinearLayout>
@@ -433,8 +336,8 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cv_apartments"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_margin="10dp"
                     android:elevation="50dp"
                     app:cardBackgroundColor="@color/white"
@@ -452,7 +355,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@drawable/appartments"
-                            app:tint="@color/colorPrimary">
+                            app:tint="#878787">
 
                         </ImageView>
 
@@ -462,8 +365,7 @@
                             android:layout_marginTop="8dp"
                             android:text="Apartments"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
-                            android:textStyle="bold">
+                            android:textSize="16sp">
 
                         </TextView>
                     </LinearLayout>
@@ -472,8 +374,8 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cv_shops"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_margin="10dp"
                     android:elevation="50dp"
                     app:cardBackgroundColor="@color/white"
@@ -491,7 +393,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@drawable/shops"
-                            app:tint="@color/colorPrimary">
+                            app:tint="#878787">
 
                         </ImageView>
 
@@ -501,8 +403,7 @@
                             android:layout_marginTop="8dp"
                             android:text="Shops"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
-                            android:textStyle="bold">
+                            android:textSize="16sp">
 
                         </TextView>
                     </LinearLayout>
@@ -521,7 +422,6 @@
                 android:layout_centerInParent="true"
                 android:layout_gravity="center"
                 android:layout_marginStart="5dp"
-                android:layout_marginTop="15dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="5dp"
                 android:alignmentMode="alignMargins"
@@ -532,8 +432,8 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cv_ntr1"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_margin="10dp"
                     android:elevation="50dp"
                     app:cardBackgroundColor="@color/white"
@@ -555,8 +455,7 @@
                             android:padding="1dp"
                             android:text="NTR Phase1"
                             android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold">
+                            android:textSize="16sp">
 
                         </TextView>
 
@@ -564,7 +463,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@drawable/home_work"
-                            app:tint="@color/colorPrimary" />
+                            app:tint="@color/color_grey" />
 
                     </LinearLayout>
 
@@ -572,8 +471,8 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cv_ntr2"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_margin="10dp"
                     android:elevation="50dp"
                     app:cardBackgroundColor="@color/white"
@@ -594,8 +493,7 @@
                             android:padding="1dp"
                             android:text="NTR Phase2"
                             android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold">
+                            android:textSize="16sp">
 
                         </TextView>
 
@@ -603,15 +501,15 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@drawable/home_work"
-                            app:tint="@color/colorPrimary" />
+                            app:tint="@color/color_grey" />
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cv_peral"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_margin="10dp"
                     android:elevation="50dp"
                     app:cardBackgroundColor="@color/white"
@@ -634,7 +532,7 @@
                             android:text="Peral Residency"
                             android:textColor="@color/black"
                             android:textSize="16sp"
-                            android:textStyle="bold">
+                            android:gravity="center">
 
                         </TextView>
 
@@ -642,7 +540,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@drawable/home_work"
-                            app:tint="@color/colorPrimary" />
+                            app:tint="@color/color_grey" />
 
                     </LinearLayout>
 
@@ -650,8 +548,8 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cv_jbr"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_margin="10dp"
                     android:elevation="50dp"
                     app:cardBackgroundColor="@color/white"
@@ -672,8 +570,7 @@
                             android:padding="1dp"
                             android:text="JBR Icon 1"
                             android:textColor="@color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold">
+                            android:textSize="16sp">
 
                         </TextView>
 
@@ -681,7 +578,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@drawable/home_work"
-                            app:tint="@color/colorPrimary">
+                            app:tint="@color/color_grey">
 
                         </ImageView>
 
@@ -692,6 +589,167 @@
 
             </GridLayout>
 
+            <LinearLayout
+                android:id="@+id/budget_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/rangeBarTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginEnd="21dp"
+                    android:text="Price Range"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/rangeBarValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:text="PKR 15000 - PKR 34000"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="21dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
+
+
+                <com.stfalcon.pricerangebar.RangeBarWithChart
+                    android:id="@+id/rangeBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="16dp"
+                    app:barActiveLineColor="@android:color/holo_red_dark"
+                    app:barActiveThumbColor="@android:color/holo_red_light"
+                    app:barChartSelectedBackgroundColor="@android:color/holo_red_dark"
+                    app:barChartSelectedLineColor="@android:color/holo_green_dark"
+                    app:barChartUnSelectedLineColor="@android:color/holo_green_light"
+                    app:barChartUnselectedBackgroundColor="@android:color/holo_blue_light"
+                    app:barLineColor="@android:color/holo_blue_light"
+                    android:layout_marginEnd="21dp"
+                    android:layout_marginBottom="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/browse"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:orientation="horizontal">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:elevation="8dp"
+                        app:cardCornerRadius="100dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/grey">
+
+                            <Button
+                                android:id="@+id/btn_any"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/button_background"
+                                android:gravity="center"
+                                android:text="Any"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:textStyle="bold">
+
+                            </Button>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/grey"
+                        android:elevation="8dp"
+                        app:cardCornerRadius="100dp"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/grey">
+
+                            <Button
+                                android:id="@+id/btn_monthly"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@drawable/btn_bg_selector"
+                                android:text="Monthly"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold">
+
+                            </Button>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/grey"
+                        android:elevation="8dp"
+                        app:cardCornerRadius="100dp"
+                        android:visibility="visible">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/grey"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/btn_annually"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/btn_bg_selector"
+                                android:gravity="center"
+                                android:text="Annually"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold">
+
+                            </Button>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
 
         </LinearLayout>
 

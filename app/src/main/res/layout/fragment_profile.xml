@@ -21,35 +21,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/earningPercentage"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:textStyle="bold"
-                        android:textSize="28sp"
-                        android:text="25%" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:layout_centerInParent="true"
-                        android:text="Total Earning" />
-                </LinearLayout>
-
-
-                <ProgressBar
-                    android:id="@+id/progressBar"
-                    style="?android:attr/progressBarStyleHorizontal"
+                <com.anychart.AnyChartView
+                    android:id="@+id/pieChart"
                     android:layout_width="300dp"
                     android:layout_height="300dp"
                     android:layout_centerInParent="true"
@@ -57,12 +31,50 @@
                     android:layout_marginStart="50dp"
                     android:layout_marginTop="50dp"
                     android:layout_marginEnd="50dp"
-                    android:layout_marginBottom="50dp"
-                    android:background="@drawable/circle_shape"
-                    android:indeterminate="false"
-                    android:max="100"
-                    android:progress="25"
-                    android:progressDrawable="@drawable/circular_progress_bar" />
+                    android:layout_marginBottom="50dp" />
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/earningPercentage"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textSize="28sp"-->
+<!--                        android:text="25%" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:layout_centerInParent="true"-->
+<!--                        android:text="Total Earning" />-->
+<!--                </LinearLayout>-->
+
+
+<!--                <ProgressBar-->
+<!--                    android:id="@+id/progressBar"-->
+<!--                    style="?android:attr/progressBarStyleHorizontal"-->
+<!--                    android:layout_width="300dp"-->
+<!--                    android:layout_height="300dp"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginStart="50dp"-->
+<!--                    android:layout_marginTop="50dp"-->
+<!--                    android:layout_marginEnd="50dp"-->
+<!--                    android:layout_marginBottom="50dp"-->
+<!--                    android:background="@drawable/circle_shape"-->
+<!--                    android:indeterminate="false"-->
+<!--                    android:max="100"-->
+<!--                    android:progress="25"-->
+<!--                    android:progressDrawable="@drawable/circular_progress_bar" />-->
             </RelativeLayout>
 
 

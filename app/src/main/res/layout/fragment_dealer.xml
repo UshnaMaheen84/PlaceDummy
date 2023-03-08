@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background2"
     tools:context=".fragments.DealerFragment">
 
     <ScrollView
@@ -16,13 +17,13 @@
             <LinearLayout
                 android:weightSum="100"
                 android:orientation="horizontal"
-                android:background="@drawable/rectangle_21"
+                android:background="@drawable/gradient_background"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingStart="18dp"
                 android:paddingEnd="18dp"
-                android:paddingBottom="50dp"
-                android:paddingTop="20dp">
+                android:paddingBottom="30dp"
+                android:paddingTop="30dp">
 
 
                 <ImageView
@@ -47,7 +48,7 @@
                 <ImageView
                     android:layout_gravity="center_vertical"
                     android:gravity="center"
-                    android:layout_weight="0"
+                    android:layout_weight="10"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_margin="10dp"
@@ -72,8 +73,8 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
                     android:text="Add/Update Sub Dealer"
-                    android:textStyle="bold"
-                    android:textSize="21sp" />
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"

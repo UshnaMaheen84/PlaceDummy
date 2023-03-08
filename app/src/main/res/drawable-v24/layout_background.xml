@@ -7,6 +7,6 @@
         android:angle="60"
         android:startColor="@android:color/transparent"
         android:centerColor="@color/white"
-        android:endColor="@color/white"/>
+        android:endColor="@color/background2"/>
 
 </shape>
