@@ -134,8 +134,15 @@
                     android:text="Delete Sub Dealer"
                     android:textStyle="bold"
                     android:textSize="21sp" />
+<TextView
+    android:id="@+id/check"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="23sp">
 
+</TextView>
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/dealer_recyclerview"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     tools:listitem="@layout/dealer_item_view"/>

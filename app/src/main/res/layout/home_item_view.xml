@@ -57,6 +57,7 @@
                     android:textSize="21sp" />
 
                 <TextView
+                    android:id="@+id/locationn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
@@ -79,6 +80,7 @@
                     </ImageView>
 
                     <TextView
+                        android:id="@+id/rooms"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="28dp"
@@ -93,6 +95,7 @@
                         app:tint="@color/color_grey" />
 
                     <TextView
+                        android:id="@+id/area"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"

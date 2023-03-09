@@ -14,9 +14,9 @@
           <stringArguments>
             <stringArg name="classpath">
               <args>
-                <arg>$MODULE_DIR$/../../../app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/a3c62d2cd1e65c632560c8a1ef4a8b08/transformed/jetified-CountryCodePicker-1.0.2-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/bebc69a96c2b03939280106af6f00191/transformed/jetified-viewbinding-7.4.2-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/7cf2cd4164a22454c7b008fda68a39d9/transformed/jetified-logging-interceptor-5.0.0-alpha.2.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/26a3f2d39ece04ffd36ade907f25a565/transformed/jetified-lifecycle-viewmodel-ktx-2.4.1-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/a5f955c0a514ed80b81bce3e8b6b74be/transformed/material-1.8.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/4211787e0e17e88e7c9d84d3de656105/transformed/jetified-StfalconPriceRangeBar-android-v1.5-api.jar</arg>
@@ -63,11 +63,17 @@
                 <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation/1.3.0/21f49f5f9b85fc49de712539f79123119740595/annotation-1.3.0.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/9003f1ec42c59c2b8e093fe1299658fe/transformed/jetified-kotlin-stdlib-jdk7-1.7.10.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/fb4181026e6b3f20204ca3e7940e27cb/transformed/jetified-annotation-experimental-1.3.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/8a91a49109190b41e821bf50832127ee/transformed/jetified-converter-gson-2.9.0.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/c5a362a54b392591cf68a9c2c3216921/transformed/jetified-converter-scalars-2.9.0.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/c4a8f9bf805c88ac9f3c652437b0db94/transformed/jetified-retrofit-2.9.0.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/912ba5121d1a71a1cf15f8ba8ef27a8b/transformed/jetified-okhttp-5.0.0-alpha.2.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/7d179d7260ef9660dce17b5f0280cfd7/transformed/jetified-okio-jvm-2.9.0.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/5fd9043b88bef1823f4daa5454032e9f/transformed/jetified-kotlin-stdlib-1.7.10.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/e344d2ed2e711d38e98c05cb623e2c41/transformed/jetified-kotlin-stdlib-common-1.7.10.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/8f8d4d0805ebf02aa2fdfe7e021cd7a4/transformed/jetified-annotations-13.0.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/d97f0bf1ea160962a52656bfd5e97dd1/transformed/constraintlayout-2.1.4-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/0cc1976f46e766ed7d80d1b64f4287d6/transformed/jetified-materialcountrypicker-0.2.3-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/d3532242abba62f68fa2914b43592d39/transformed/jetified-gson-2.8.5.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/e8d588587461b1d0b23320c40142bf8f/transformed/jetified-AnyChart-Android-1.1.2-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/e53558b6e22ca852d54ef4994e9935c2/transformed/jetified-MPAndroidChart-v3.1.0-api.jar</arg>
                 <arg>$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-33/android.jar</arg>
