@@ -3,14 +3,14 @@ package com.example.placedummy
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.placedummy.databinding.ActivityLogin2Binding
+import com.example.placedummy.databinding.ActivityLoginBinding
 
 class LogIn : AppCompatActivity() {
 
-    lateinit var binding: ActivityLogin2Binding
+    lateinit var binding: ActivityLoginBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding=ActivityLogin2Binding.inflate(layoutInflater)
+        binding= ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val username= binding.etUsername.text.toString()
