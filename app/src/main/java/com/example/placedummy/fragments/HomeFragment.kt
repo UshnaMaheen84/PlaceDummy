@@ -37,14 +37,17 @@ class HomeFragment : Fragment() {
 
 
         val gridcategory= view.findViewById<GridLayout>(com.example.placedummy.R.id.grid_category)
-        val btn_category= view.findViewById<Button>(com.example.placedummy.R.id.text_category)
+        val btn_category= view.findViewById<Button>(com.example.placedummy.R.id.btn_category)
 
         val gridproject= view.findViewById<GridLayout>(com.example.placedummy.R.id.grid_project)
-        val btn_project= view.findViewById<Button>(com.example.placedummy.R.id.text_project)
+        val btn_project= view.findViewById<Button>(com.example.placedummy.R.id.btn_project)
 
-        val btn_budget= view.findViewById<Button>(com.example.placedummy.R.id.text_budget)
+        val btn_budget= view.findViewById<Button>(com.example.placedummy.R.id.btn_budget)
         val layout_budget= view.findViewById<LinearLayout>(com.example.placedummy.R.id.budget_layout)
 
+        val btn_any= view.findViewById<Button>(com.example.placedummy.R.id.btn_any)
+        val btn_monthly= view.findViewById<Button>(com.example.placedummy.R.id.btn_monthly)
+        val btn_annually= view.findViewById<Button>(com.example.placedummy.R.id.btn_annually)
 
 
         btn_category.setOnClickListener {
@@ -63,6 +66,7 @@ class HomeFragment : Fragment() {
 
 
         }
+
         btn_budget.setOnClickListener {
 
             layout_budget.visibility = View.VISIBLE
@@ -95,6 +99,43 @@ class HomeFragment : Fragment() {
             btn_budget.setTextColor(Color.BLACK)
 
         }
+
+        btn_any.setOnClickListener {
+
+            btn_any.setBackgroundResource(com.example.placedummy.R.drawable.button_background)
+            btn_monthly.setBackgroundResource(com.example.placedummy.R.drawable.btn_bg_selector)
+            btn_annually.setBackgroundResource(com.example.placedummy.R.drawable.btn_bg_selector)
+
+            btn_any.setTextColor(Color.WHITE)
+            btn_monthly.setTextColor(Color.BLACK)
+            btn_annually.setTextColor(Color.BLACK)
+
+        }
+
+        btn_monthly.setOnClickListener {
+
+            btn_monthly.setBackgroundResource(com.example.placedummy.R.drawable.button_background)
+            btn_any.setBackgroundResource(com.example.placedummy.R.drawable.btn_bg_selector)
+            btn_annually.setBackgroundResource(com.example.placedummy.R.drawable.btn_bg_selector)
+
+            btn_any.setTextColor(Color.BLACK)
+            btn_monthly.setTextColor(Color.WHITE)
+            btn_annually.setTextColor(Color.BLACK)
+
+        }
+
+        btn_annually.setOnClickListener {
+
+            btn_monthly.setBackgroundResource(com.example.placedummy.R.drawable.btn_bg_selector)
+            btn_any.setBackgroundResource(com.example.placedummy.R.drawable.btn_bg_selector)
+            btn_annually.setBackgroundResource(com.example.placedummy.R.drawable.button_background)
+
+            btn_any.setTextColor(Color.BLACK)
+            btn_monthly.setTextColor(Color.BLACK)
+            btn_annually.setTextColor(Color.WHITE)
+
+        }
+
         return view
 
     }

@@ -157,7 +157,7 @@
                         android:background="@color/grey">
 
                         <Button
-                            android:id="@+id/text_category"
+                            android:id="@+id/btn_category"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -191,7 +191,7 @@
                         android:background="@color/grey">
 
                         <Button
-                            android:id="@+id/text_budget"
+                            android:id="@+id/btn_budget"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -227,7 +227,7 @@
                         android:orientation="vertical">
 
                         <Button
-                            android:id="@+id/text_project"
+                            android:id="@+id/btn_project"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
