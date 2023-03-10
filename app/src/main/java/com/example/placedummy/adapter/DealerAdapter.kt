@@ -1,6 +1,5 @@
 package com.example.placedummy.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,9 +7,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.placedummy.R
-import com.example.placedummy.model.Item
+import com.example.placedummy.model.Dealer
 
-class DealerAdapter(val userList: List<Item>):
+class DealerAdapter(val userList: List<Dealer>):
     RecyclerView.Adapter<DealerAdapter.ViewHolder>() {
 
 
@@ -23,7 +22,7 @@ class DealerAdapter(val userList: List<Item>):
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val dealer= userList[position]
-        holder.name.text= dealer.item[position].name
+        holder.name.text= dealer.name
     }
 
 
