@@ -102,7 +102,7 @@
                     android:background="@color/color_editText"
                     android:drawableLeft="@drawable/frame"
                     android:drawablePadding="8dp"
-                    android:drawableTint="@color/colorPrimary"
+                    android:drawableTint="@color/color_grey"
                     android:hint="username"
                     android:padding="8dp">
 
@@ -149,7 +149,7 @@
                     android:background="@color/color_editText"
                     android:drawableLeft="@drawable/key2"
                     android:drawablePadding="8dp"
-                    android:drawableTint="@color/colorPrimary"
+                    android:drawableTint="@color/color_grey"
                     android:hint="password"
                     android:inputType="textPassword"
                     android:padding="8dp">

@@ -100,7 +100,7 @@
                     android:background="@color/color_editText"
                     android:drawableLeft="@drawable/briefcase"
                     android:drawablePadding="8dp"
-                    android:hint="Company"
+                    android:hint="Enter your company name"
                     android:padding="8dp">
 
                 </EditText>
@@ -144,9 +144,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:background="@color/color_editText"
-                    android:drawableLeft="@drawable/email"
+                    android:drawableLeft="@drawable/frame"
+                    android:drawableTint="@color/color_grey"
                     android:drawablePadding="8dp"
-                    android:hint="username"
+                    android:hint="Enter your username"
                     android:padding="8dp">
 
                 </EditText>
@@ -191,7 +192,7 @@
                     android:background="@color/color_editText"
                     android:drawableLeft="@drawable/key2"
                     android:drawablePadding="8dp"
-                    android:hint="password"
+                    android:hint="Enter your password"
                     android:inputType="textPassword"
                     android:padding="8dp">
 
@@ -232,14 +233,14 @@
 
 
                 <EditText
-                    android:id="@+id/et_ph_no"
+                    android:id="@+id/et_phone_no"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:background="@color/color_editText"
                     android:drawableLeft="@drawable/mobile"
                     android:drawablePadding="8dp"
-                    android:hint="phone number"
+                    android:hint="Enter your phone number"
                     android:inputType="number"
                     android:padding="8dp">
 
@@ -278,14 +279,14 @@
 
 
                 <EditText
-                    android:id="@+id/et_usernameadress"
+                    android:id="@+id/et_address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:background="@color/color_editText"
                     android:drawableLeft="@drawable/home_work"
                     android:drawablePadding="8dp"
-                    android:hint="Company address"
+                    android:hint="Enter your complete address"
                     android:padding="8dp">
 
                 </EditText>

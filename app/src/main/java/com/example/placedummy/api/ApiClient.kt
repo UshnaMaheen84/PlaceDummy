@@ -4,6 +4,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+const val BASEURL ="http://syedbrothers.tech/api/"
 
 object ApiClient {
 
@@ -18,7 +19,7 @@ object ApiClient {
 
         val retrofit = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl("https://localhost:7032/api/")
+            .baseUrl(BASEURL)
             .client(client)
             .build()
 
