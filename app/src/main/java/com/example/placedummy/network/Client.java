@@ -1,2 +1,6 @@
-package com.example.placedummy.network;public class Client {
+package com.example.placedummy.network;
+
+public class Client
+{
+
 }
