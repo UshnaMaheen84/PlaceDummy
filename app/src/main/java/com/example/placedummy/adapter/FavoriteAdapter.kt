@@ -1,6 +1,7 @@
 package com.example.placedummy.adapter
 
 import android.content.Context
+import android.provider.ContactsContract
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +11,10 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.placedummy.R
 
-class FavoriteAdapter(context: Context): RecyclerView.Adapter<FavoriteAdapter.ViewHolder>() {
+class FavoriteAdapter(): RecyclerView.Adapter<FavoriteAdapter.ViewHolder>() {
+
+//    val fullList = ArrayList<>()
+//    val propertyList = ArrayList<>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.favourite_item_view,parent,false)
@@ -18,7 +22,6 @@ class FavoriteAdapter(context: Context): RecyclerView.Adapter<FavoriteAdapter.Vi
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        TODO("Not yet implemented")
     }
 
     override fun getItemCount(): Int {
@@ -26,14 +29,14 @@ class FavoriteAdapter(context: Context): RecyclerView.Adapter<FavoriteAdapter.Vi
     }
 
 //    fun filterlist(search: String){
-//        NoteList.clear()
+//        propertyList.clear()
 //
 //        for (item in fullList){
 //
 //            if (item.title?.lowercase()?.contains(search.lowercase())== true ||
 //                item.note?.lowercase()?.contains(search.lowercase())== true){
 //
-//                NoteList.add(item)
+//                propertyList.add(item)
 //            }
 //        }
 //        notifyDataSetChanged()

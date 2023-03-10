@@ -7,12 +7,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.placedummy.R
 import com.example.placedummy.adapter.DealerAdapter
 import com.example.placedummy.api.ApiInterface
 import com.example.placedummy.model.Dealer
+import kotlinx.android.synthetic.main.fragment_dealer.*
+import kotlinx.android.synthetic.main.fragment_favourite.*
 import retrofit2.*
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -26,7 +29,7 @@ class DealerFragment : Fragment() {
         arguments?.let {
             }
     }
-    lateinit var dealer_adapter: DealerAdapter
+    lateinit var adapter: DealerAdapter
     lateinit var recyclerView:RecyclerView
     lateinit var tv :TextView
 
@@ -38,6 +41,24 @@ class DealerFragment : Fragment() {
         val view: View = inflater.inflate(R.layout.fragment_dealer, null)
 
          recyclerView= view.findViewById(R.id.dealer_recyclerview)
+        adapter= DealerAdapter()
+        recyclerView.setHasFixedSize(true)
+        recyclerView.adapter= adapter
+        recyclerView.layoutManager= LinearLayoutManager(context)
+
+        dealerSearch.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                if (newText != null){
+                              adapter.filterlist(newText)
+                }
+                return true            }
+        })
+
+
 
         tv= view.findViewById(R.id.check)
 
@@ -60,9 +81,9 @@ class DealerFragment : Fragment() {
         Log.e("log3","working")
 
 
-        retrofitdata.enqueue(object : Callback<List<Dealer>> {
+        retrofitdata.enqueue(object : Callback<ArrayList<Dealer>> {
 
-            override fun onResponse(call: Call<List<Dealer>>, response: Response<List<Dealer>>) {
+            override fun onResponse(call: Call<ArrayList<Dealer>>, response: Response<ArrayList<Dealer>>) {
                 Log.e("log4",response.toString())
 
                 val responseBody= response.body()!!
@@ -71,17 +92,14 @@ class DealerFragment : Fragment() {
                 Log.e("log5",responseBody.toString())
 
 
-                //   val dealerAdapter= getContext()?.let { DealerAdapter(it,responseBody) }
-
-
-                dealer_adapter= DealerAdapter(responseBody)
+                adapter= DealerAdapter()
                 recyclerView.setHasFixedSize(true)
-                recyclerView.adapter= dealer_adapter
+                recyclerView.adapter= adapter
                 recyclerView.layoutManager= LinearLayoutManager(context)
 
             }
 
-            override fun onFailure(call: Call<List<Dealer>>, t: Throwable) {
+            override fun onFailure(call: Call<ArrayList<Dealer>>, t: Throwable) {
                 Log.e("log6",t.message.toString())
 
             }

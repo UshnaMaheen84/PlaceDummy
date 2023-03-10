@@ -39,6 +39,7 @@
                 </ImageView>
 
                 <androidx.appcompat.widget.SearchView
+                    android:id="@+id/dealerSearch"
                     android:layout_weight="90"
                     android:layout_height="50dp"
                     android:background="@drawable/button_background2"

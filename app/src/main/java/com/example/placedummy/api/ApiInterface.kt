@@ -13,5 +13,5 @@ interface ApiInterface {
     fun getData() : Call<List<Item>>
 
     @GET("Dealer/DealerLogin")
-    fun getDealer(): Call<List<Dealer>>
+    fun getDealer(): Call<ArrayList<Dealer>>
 }
