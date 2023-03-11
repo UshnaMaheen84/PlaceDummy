@@ -17,21 +17,17 @@
             android:orientation="vertical">
 
             <RelativeLayout
-                android:background="@color/white"
+                android:background="@drawable/rectangle_21"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
 
-                <com.anychart.AnyChartView
-                    android:id="@+id/pieChart"
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pie_chart"
                     android:layout_width="match_parent"
-                    android:layout_height="350dp"
-                    android:layout_centerInParent="true"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginEnd="50dp"
-                    android:layout_marginBottom="50dp" />
+                    android:layout_height="400dp" />
+
+
 
        </RelativeLayout>
 
@@ -44,6 +40,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="5dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -51,10 +48,11 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:orientation="horizontal"
-                    android:padding="5dp">
+                    android:padding="5dp"
+                    >
 
                     <ImageButton
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="15dp"
                         android:background="@drawable/image_background"
@@ -77,14 +75,16 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:padding="5dp"
                     android:layout_margin="10dp"
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="15dp"
                         android:background="@drawable/image_background"
+                        app:tint="@color/colorPrimary"
                         android:elevation="10dp"
                         android:padding="5dp"
                         android:src="@drawable/verify" />
@@ -103,13 +103,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:padding="5dp"
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="15dp"
                         android:background="@drawable/image_background"
+                        app:tint="@color/colorPrimary"
                         android:elevation="10dp"
                         android:padding="5dp"
                         android:src="@drawable/credit_card" />
@@ -126,17 +128,19 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
+                    android:padding="5dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="15dp"
                         android:background="@drawable/image_background"
                         android:elevation="10dp"
                         android:padding="5dp"
+                        app:tint="@color/colorPrimary"
                         android:src="@drawable/next" />
 
                     <TextView
@@ -152,14 +156,16 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:padding="5dp"
                     android:layout_margin="10dp"
                     android:orientation="horizontal">
 
 
                     <ImageButton
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="15dp"
+                        app:tint="@color/colorPrimary"
                         android:background="@drawable/image_background"
                         android:elevation="10dp"
                         android:padding="5dp"

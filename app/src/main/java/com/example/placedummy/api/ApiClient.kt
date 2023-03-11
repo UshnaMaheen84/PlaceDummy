@@ -1,10 +1,13 @@
 package com.example.enotes.api
 
+import com.example.placedummy.api.ApiServices
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-const val BASEURL ="http://syedbrothers.tech/api/"
+import retrofit2.converter.scalars.ScalarsConverterFactory
+
+    const val BASEURL ="http://syedbrothers.tech/api/"
 
 object ApiClient {
 
@@ -19,6 +22,7 @@ object ApiClient {
 
         val retrofit = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(ScalarsConverterFactory.create())
             .baseUrl(BASEURL)
             .client(client)
             .build()
@@ -27,7 +31,12 @@ object ApiClient {
 
     }
 
-    fun getApiService(): ApiServices{
+
+    fun getUshnaEndPointService():ApiServices{
+        return getRetrofit().create(ApiServices::class.java)
+    }
+
+    fun getApiService(): ApiServices {
         return getRetrofit().create(ApiServices::class.java)
     }
 

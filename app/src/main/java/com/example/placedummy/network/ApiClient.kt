@@ -1,6 +1,7 @@
 package com.example.placedummy.network
 
 import com.example.placedummy.api.ApiInterface
+import com.example.placedummy.api.ApiServices
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -15,7 +16,7 @@ class ApiClient {
     object MyClientSingleton {
         const val BASEURL ="http://syedbrothers.tech/api/"
 
-        fun getClient(): ApiInterface {
+        fun getClient(): ApiServices {
 
             val interceptor = HttpLoggingInterceptor()
             interceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
@@ -44,7 +45,7 @@ class ApiClient {
                 .client(client)
                 .baseUrl(BASEURL)
                 .build()
-            return retrofit.create(ApiInterface::class.java)
+            return retrofit.create(ApiServices::class.java)
         }
     }
 }

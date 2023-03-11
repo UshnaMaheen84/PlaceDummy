@@ -1,23 +1,24 @@
 package com.example.placedummy.fragments
 
+import android.graphics.Color
 import android.os.Bundle
+import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.anychart.AnyChart
-import com.anychart.AnyChartView
-import com.anychart.chart.common.dataentry.DataEntry
-import com.anychart.chart.common.dataentry.ValueDataEntry
 import com.example.placedummy.R
+import com.github.mikephil.charting.charts.PieChart
+import com.github.mikephil.charting.data.PieData
+import com.github.mikephil.charting.data.PieDataSet
+import com.github.mikephil.charting.data.PieEntry
+import kotlinx.android.synthetic.main.fragment_profile.*
 
 
 class ProfileFragment : Fragment() {
 
-    private var chart: AnyChartView? = null
+//    private var chart: PieChart? = null
 
-    private val salary = listOf(200,300,400,600)
-    private val month = listOf("January","February","March","April")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,28 +30,52 @@ class ProfileFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view: View = inflater.inflate(com.example.placedummy.R.layout.fragment_profile, null)
+        val view: View = inflater.inflate(R.layout.fragment_profile, null)
 
-
-        chart = view.findViewById(R.id.pieChart)
-
-        configChartView()
         return view
     }
 
-    private fun configChartView() {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        Handler().postDelayed(Runnable {
+            setUpSelectionPieChart()
+        },1000)
+    }
 
-        val pie : com.anychart.charts.Pie = AnyChart.pie()
+    private fun setUpSelectionPieChart() {
 
-        val dataPieChart: MutableList<DataEntry> = mutableListOf()
+        //Create a dataset
+        val dataArray = ArrayList<PieEntry>()
+        dataArray.add(PieEntry(38f))
+        dataArray.add(PieEntry(14f))
+        dataArray.add(PieEntry(14f))
+        dataArray.add(PieEntry(34f))
+        val dataSet = PieDataSet(dataArray, "")
+        dataSet.valueTextSize=20f
+        dataSet.valueTextColor= Color.WHITE
 
-        for (index in salary.indices){
-            dataPieChart.add(ValueDataEntry(month.elementAt(index),salary.elementAt(index)))
-        }
+        //Color set for the chart
+        val colorSet = java.util.ArrayList<Int>()
+        colorSet.add(Color.rgb(255,107,107))  //red
+        colorSet.add(Color.rgb(173,232,244))  // blue
+        colorSet.add(Color.rgb(216,243,220))  // green
+        colorSet.add(Color.rgb(255,230,109))  // Yellow
+        dataSet.setColors(colorSet)
+        pie_chart.description.text = "Pie chart"
+        pie_chart.description.textSize = 20f
 
-        pie.data(dataPieChart)
-        pie.title("Salaries Overview")
-        chart!!.setChart(pie)
+        //Chart data and other styling
+        pie_chart.centerTextRadiusPercent = 0f
+        pie_chart.isDrawHoleEnabled = true
+        pie_chart.legend.isEnabled = false
+        pie_chart.description.isEnabled = true
+        val data = PieData(dataSet)
+        pie_chart.data = data
+
+        //chart description
+
+
+
     }
 
 }

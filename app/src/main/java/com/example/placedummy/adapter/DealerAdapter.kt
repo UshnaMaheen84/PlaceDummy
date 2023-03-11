@@ -11,33 +11,35 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.placedummy.R
 import com.example.placedummy.model.Dealer
 
-class DealerAdapter():
+class DealerAdapter(private val list: List<Dealer>) :
     RecyclerView.Adapter<DealerAdapter.ViewHolder>() {
 
     val fullList = ArrayList<Dealer>()
-    val userList= ArrayList<Dealer>()
+    val userList = ArrayList<Dealer>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.dealer_item_view,parent,false)
+        val itemView =
+            LayoutInflater.from(parent.context).inflate(R.layout.dealer_item_view, parent, false)
         return ViewHolder(itemView)
     }
 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        val dealer= userList[position]
-        holder.name.text= dealer.name
+        val dealer = list[position]
+        holder.name.text = dealer.name
+        userList.add(list[position])
     }
 
 
-    override fun getItemCount()= userList.size
+    override fun getItemCount() = list.size
 
-    fun filterlist(search: String){
+    fun filterlist(search: String) {
         userList.clear()
 
-        for (item in fullList){
+        for (item in fullList) {
 
-            if (item.name?.lowercase()?.contains(search.lowercase())== true ){
+            if (item.name?.lowercase()?.contains(search.lowercase()) == true) {
 
                 userList.add(item)
             }
@@ -45,7 +47,7 @@ class DealerAdapter():
         notifyDataSetChanged()
     }
 
-    class ViewHolder (itemview : View): RecyclerView.ViewHolder(itemview){
+    class ViewHolder(itemview: View) : RecyclerView.ViewHolder(itemview) {
         val imageview: ImageView = itemView.findViewById(R.id.deleteImg)
         val name: TextView = itemView.findViewById(R.id.dealerName)
 
