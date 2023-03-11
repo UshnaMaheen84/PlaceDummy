@@ -15,12 +15,9 @@ import java.util.concurrent.TimeUnit
 class ApiClient {
     object MyClientSingleton {
         const val BASEURL ="http://syedbrothers.tech/api/"
-
         fun getClient(): ApiServices {
-
             val interceptor = HttpLoggingInterceptor()
             interceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
-
             val builder: OkHttpClient.Builder = OkHttpClient.Builder().addInterceptor(object :
                 Interceptor {
                 @Throws(IOException::class)
@@ -31,14 +28,11 @@ class ApiClient {
                     return chain.proceed(newRequest)
                 }
             })
-
             builder.readTimeout(35, TimeUnit.SECONDS)
             builder.retryOnConnectionFailure(true)
             builder.connectTimeout(35, TimeUnit.SECONDS)
             builder.writeTimeout(35, TimeUnit.SECONDS)
-
             builder.addInterceptor(interceptor)
-
             val client = builder.build()
             var retrofit = Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())

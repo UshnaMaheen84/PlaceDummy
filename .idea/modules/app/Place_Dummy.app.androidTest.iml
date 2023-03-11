@@ -93,6 +93,7 @@
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/908d5ae426f1e973e46af396032958d9/transformed/constraintlayout-2.1.4-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/10a3f1625e44d694bcfc47bc98f4ab51/transformed/jetified-materialcountrypicker-0.2.3-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/c2abbede9f0a320681747f6d4a9243d6/transformed/jetified-MPAndroidChart-v3.1.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/303fa81a1543cc4f770467ad18b69441/transformed/jetified-hellocharts-library-1.5.8-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/2ed931df4c624cd7090451eb8eb6837a/transformed/jetified-gson-2.9.0.jar</arg>
                 <arg>$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-33/android.jar</arg>
                 <arg>$USER_HOME$/AppData/Local/Android/Sdk/build-tools/30.0.3/core-lambda-stubs.jar</arg>

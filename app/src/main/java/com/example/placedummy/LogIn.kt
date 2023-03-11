@@ -5,16 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import androidx.appcompat.widget.SearchView
-import androidx.core.content.ContentProviderCompat.requireContext
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.enotes.api.ApiClient
-import com.example.placedummy.adapter.DealerAdapter
 import com.example.placedummy.databinding.ActivityLoginBinding
 import com.example.placedummy.model.DealerRequestLogin
 import com.example.placedummy.model.UserLogin
-import com.google.gson.JsonElement
-import kotlinx.android.synthetic.main.fragment_dealer.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -59,22 +53,21 @@ class LogIn : AppCompatActivity() {
     private fun getData() {
         Log.e("log2", "working")
 
+
         val email: String = "usama@gmail.com"
         val password: String = "123456"
-
 
         val json = HashMap<String, String>()
         json.put("Email", email)
         json.put("Password", password)
 
+        val data = DealerRequestLogin(email, password)
 
-        val call =
-            com.example.placedummy.network.ApiClient.MyClientSingleton.getClient().getData2(json)
-
+        val call = com.example.placedummy.network.ApiClient.MyClientSingleton.getClient().dealerLogin(data)
 
         call.enqueue(object : Callback<String> {
 
-            override fun onResponse( call: Call<String>, response: Response<String>) {
+            override fun onResponse(call: Call<String>, response: Response<String>) {
                 Log.e("log4", response.toString())
                 if (response.isSuccessful) {
 
@@ -87,8 +80,6 @@ class LogIn : AppCompatActivity() {
                     Toast.makeText(this@LogIn, response.message(), Toast.LENGTH_LONG).show()
                     Log.e("failureError", response.message())
                 }
-
-
             }
 
             override fun onFailure(call: Call<String>, t: Throwable) {
