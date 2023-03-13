@@ -117,7 +117,7 @@
                             android:textStyle="bold" />
 
                         <ImageView
-                            android:id="@+id/cart_increment"
+                            android:id="@+id/dealer_increment"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@drawable/circle_background"
@@ -128,6 +128,7 @@
                 </RelativeLayout>
 
                 <TextView
+                    android:id="@+id/delete_subdealer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -135,18 +136,302 @@
                     android:text="Delete Sub Dealer"
                     android:textStyle="bold"
                     android:textSize="21sp" />
-<TextView
-    android:id="@+id/check"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:textSize="23sp">
-
-</TextView>
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/dealer_recyclerview"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    tools:listitem="@layout/dealer_item_view"/>
+                    tools:listitem="@layout/dealer_item_view"
+                    android:visibility="visible"/>
+
+
+                <ScrollView
+                    android:id="@+id/add_dealers_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <EditText
+                            android:id="@+id/add_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:padding="8dp"
+                            android:background="@color/color_editText"
+                            android:hint="email"
+                            android:textSize="18sp">
+
+                        </EditText>
+                        <EditText
+                            android:id="@+id/add_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:padding="8dp"
+                            android:background="@color/color_editText"
+                            android:hint="name"
+                            android:textSize="18sp">
+
+                        </EditText>
+                        <EditText
+                            android:id="@+id/add_cnic"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:padding="8dp"
+                            android:background="@color/color_editText"
+                            android:hint="CNIC"
+                            android:textSize="18sp">
+
+                        </EditText>
+
+                        <EditText
+                            android:id="@+id/add_address1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:padding="8dp"
+                            android:background="@color/color_editText"
+                            android:hint="address 1"
+                            android:textSize="18sp"/>
+
+
+                        <EditText
+                            android:id="@+id/add_address2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:padding="8dp"
+                            android:background="@color/color_editText"
+                            android:hint="address2"
+                            android:textSize="18sp">
+
+                        </EditText>
+                        <EditText
+                            android:id="@+id/add_dealerCompany"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:padding="8dp"
+                            android:background="@color/color_editText"
+                            android:hint="Dealer Company"
+                            android:textSize="18sp">
+
+                        </EditText>
+                        <EditText
+                            android:id="@+id/add_dcDealerCompany"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:padding="8dp"
+                            android:background="@color/color_editText"
+                            android:hint="Dc DealerCompany"
+                            android:textSize="18sp">
+
+                        </EditText>
+
+                        <EditText
+                            android:id="@+id/add_createdby"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:padding="8dp"
+                            android:background="@color/color_editText"
+                            android:hint="created by"
+                            android:inputType="number"
+                            android:textSize="18sp">
+
+                        </EditText>
+                        <EditText
+                            android:id="@+id/add_dealerCompanyId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:padding="8dp"
+                            android:inputType="number"
+                            android:background="@color/color_editText"
+                            android:hint="dealerCompanyId"
+                            android:textSize="18sp">
+
+                        </EditText>
+                        <EditText
+                            android:id="@+id/add_dealerId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:padding="8dp"
+                            android:background="@color/color_editText"
+                            android:inputType="number"
+                            android:hint="dealer Id"
+                            android:textSize="18sp">
+
+                        </EditText>
+                        <EditText
+                            android:id="@+id/add_genger"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:padding="8dp"
+                            android:background="@color/color_editText"
+                            android:hint="gender"
+                            android:textSize="18sp">
+
+                        </EditText>
+                        <TextView
+                            android:id="@+id/add_isCreatedByEmployee"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:padding="8dp"
+                            android:background="@color/color_editText"
+                            android:text="Created By Employee"
+                            android:textSize="18sp">
+
+                        </TextView>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+
+                            <RadioButton
+                                android:id="@+id/add_isCreatedByEmployee_yes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="25dp"
+                                android:text="Yes">
+
+                            </RadioButton>
+                            <RadioButton
+                                android:id="@+id/add_isCreatedByEmployee_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="25dp"
+                                android:text="No">
+
+                            </RadioButton>
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/add_isSubDealer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:padding="8dp"
+                            android:text="Is SubDealer"
+                            android:textSize="18sp">
+
+                        </TextView>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+
+                            <RadioButton
+                                android:id="@+id/add_isSubDealer_yes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="25dp"
+                                android:text="Yes">
+
+                            </RadioButton>
+                            <RadioButton
+                                android:id="@+id/add_isSubDealer_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="25dp"
+                                android:text="No">
+
+                            </RadioButton>
+                        </LinearLayout>
+                        <EditText
+                            android:id="@+id/add_modifiedBy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:padding="8dp"
+                            android:background="@color/color_editText"
+                            android:hint="modifiedBy"
+                            android:inputType="number"
+                            android:textSize="18sp">
+
+                        </EditText>
+                        <EditText
+                            android:id="@+id/add_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:padding="8dp"
+                            android:background="@color/color_editText"
+                            android:hint="password"
+                            android:textSize="18sp">
+
+                        </EditText>
+                        <EditText
+                            android:id="@+id/add_phoneNumber1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:padding="8dp"
+                            android:background="@color/color_editText"
+                            android:hint="phoneNumber1"
+                            android:textSize="18sp">
+
+                        </EditText>
+                        <EditText
+                            android:id="@+id/add_phoneNumber2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:padding="8dp"
+                            android:background="@color/color_editText"
+                            android:hint="phoneNumber2"
+                            android:textSize="18sp">
+
+                        </EditText>
+                        <TextView
+                            android:id="@+id/add_profileImagePath"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:padding="8dp"
+                            android:background="@color/color_editText"
+                            android:text="profileImagePath"
+                            android:textSize="18sp">
+
+                        </TextView>
+                        <EditText
+                            android:id="@+id/add_rePassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:padding="8dp"
+                            android:background="@color/color_editText"
+                            android:hint="rePassword"
+                            android:textSize="18sp">
+
+                        </EditText>
+
+                        <Button
+                            android:id="@+id/btn_add_dealer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:background="@drawable/button_background"
+                            android:text="add"
+                            android:textColor="@color/white"
+                            >
+
+                        </Button>
+                    </LinearLayout>
+
+
+                </ScrollView>
             </LinearLayout>
 
         </LinearLayout>

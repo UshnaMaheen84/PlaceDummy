@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.placedummy.R
 import com.example.placedummy.adapter.DealerAdapter
 import com.example.placedummy.adapter.FavoriteAdapter
-import kotlinx.android.synthetic.main.fragment_favourite.*
+import com.example.placedummy.databinding.FragmentFavouriteBinding
 
 class FavouriteFragment : Fragment() {
     // TODO: Rename and change types of parameters
@@ -22,6 +22,8 @@ class FavouriteFragment : Fragment() {
         arguments?.let {
          }
     }
+    lateinit var binding: FragmentFavouriteBinding
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,15 +32,16 @@ class FavouriteFragment : Fragment() {
         // Inflate the layout for this fragment
         val view: View = inflater.inflate(com.example.placedummy.R.layout.fragment_favourite, null)
 
+        binding= FragmentFavouriteBinding.inflate(inflater,container,false)
 
          adapter= FavoriteAdapter()
 
-        fav_rview.setHasFixedSize(true)
-        fav_rview.layoutManager= LinearLayoutManager(context)
-        fav_rview.adapter= adapter
+        binding.favRview.setHasFixedSize(true)
+        binding.favRview.layoutManager= LinearLayoutManager(context)
+        binding.favRview.adapter= adapter
 
 
-        fav_searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+        binding.favSearchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 return false
             }

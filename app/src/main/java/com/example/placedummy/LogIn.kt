@@ -9,6 +9,7 @@ import com.example.enotes.api.ApiClient
 import com.example.placedummy.databinding.ActivityLoginBinding
 import com.example.placedummy.model.DealerRequestLogin
 import com.example.placedummy.model.UserLogin
+import com.google.gson.JsonElement
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -55,7 +56,7 @@ class LogIn : AppCompatActivity() {
 
 
         val email: String = "usama@gmail.com"
-        val password: String = "123456"
+        val password: String = "12345"
 
         val json = HashMap<String, String>()
         json.put("Email", email)
@@ -67,12 +68,14 @@ class LogIn : AppCompatActivity() {
 
         call.enqueue(object : Callback<String> {
 
+
             override fun onResponse(call: Call<String>, response: Response<String>) {
+                Log.e("log3","in onResponse")
                 Log.e("log4", response.toString())
                 if (response.isSuccessful) {
 
-//                val intent = Intent(this@LogIn, MainActivity::class.java)
-//                startActivity(intent)
+                val intent = Intent(this@LogIn, MainActivity::class.java)
+                startActivity(intent)
 
                     val responseBody = response.body()!!
                     Log.e("log5", responseBody.toString())
@@ -87,6 +90,28 @@ class LogIn : AppCompatActivity() {
                 Toast.makeText(this@LogIn, t.toString(), Toast.LENGTH_LONG).show()
 
             }
+
+
+//            override fun onResponse(call: Call<JsonElement>, response: Response<JsonElement>) {
+//                Log.e("log3", "in onResponse")
+//                Log.e("log4", response.toString())
+//                if (response.isSuccessful) {
+//
+//                    val intent = Intent(this@LogIn, MainActivity::class.java)
+//                    startActivity(intent)
+//
+//                    val responseBody = response.body()!!
+//                    Log.e("log5", responseBody.toString())
+//                } else {
+//                    Toast.makeText(this@LogIn, response.message(), Toast.LENGTH_LONG).show()
+//                    Log.e("failureError", response.message())
+//                }
+//            }
+//            override fun onFailure(call: Call<JsonElement>, t: Throwable) {
+//
+//                Log.e("log6", t.message.toString())
+//                Toast.makeText(this@LogIn, t.toString(), Toast.LENGTH_LONG).show()
+//            }
 
 
         })

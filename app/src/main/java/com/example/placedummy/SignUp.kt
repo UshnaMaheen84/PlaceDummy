@@ -27,6 +27,9 @@ class SignUp : AppCompatActivity() {
 
         binding.createAccount.setOnClickListener {
 
+            val intent = Intent(this@SignUp, MainActivity::class.java)
+            startActivity(intent)
+            finish()
             if (company.isNotEmpty() && username.isNotEmpty()
                 && password.isNotEmpty() && phone.isNotEmpty() && address.isNotEmpty()) {
 

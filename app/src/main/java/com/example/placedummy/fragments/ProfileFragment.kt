@@ -3,21 +3,21 @@ package com.example.placedummy.fragments
 import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.placedummy.R
-import com.github.mikephil.charting.charts.PieChart
+import com.example.placedummy.databinding.FragmentProfileBinding
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
-import kotlinx.android.synthetic.main.fragment_profile.*
 
 
 class ProfileFragment : Fragment() {
 
-//    private var chart: PieChart? = null
+//    private var chart: pieChart2? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,24 +25,26 @@ class ProfileFragment : Fragment() {
         arguments?.let {
         }
     }
+    lateinit var binding: FragmentProfileBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view: View = inflater.inflate(R.layout.fragment_profile, null)
+        binding= FragmentProfileBinding.inflate(inflater,container,false)
 
-        return view
+
+        try {
+            setUpSelectionpieChart2()
+        } catch (e: Exception) {
+            Log.e("log8", e.toString()  )
+        }
+        return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        Handler().postDelayed(Runnable {
-            setUpSelectionPieChart()
-        },1000)
-    }
 
-    private fun setUpSelectionPieChart() {
+
+    private fun setUpSelectionpieChart2() {
 
         //Create a dataset
         val dataArray = ArrayList<PieEntry>()
@@ -52,7 +54,7 @@ class ProfileFragment : Fragment() {
         dataArray.add(PieEntry(34f))
         val dataSet = PieDataSet(dataArray, "")
         dataSet.valueTextSize=20f
-        dataSet.valueTextColor= Color.WHITE
+        dataSet.valueTextColor=Color.WHITE
 
         //Color set for the chart
         val colorSet = java.util.ArrayList<Int>()
@@ -61,18 +63,19 @@ class ProfileFragment : Fragment() {
         colorSet.add(Color.rgb(216,243,220))  // green
         colorSet.add(Color.rgb(255,230,109))  // Yellow
         dataSet.setColors(colorSet)
-        pie_chart.description.text = "Pie chart"
-        pie_chart.description.textSize = 20f
 
-        //Chart data and other styling
-        pie_chart.centerTextRadiusPercent = 0f
-        pie_chart.isDrawHoleEnabled = true
-        pie_chart.legend.isEnabled = false
-        pie_chart.description.isEnabled = true
         val data = PieData(dataSet)
-        pie_chart.data = data
 
         //chart description
+        binding.pieChart2.description.text = "Pie chart"
+        binding.pieChart2.description.textSize = 20f
+
+        //Chart data and other styling
+        binding.pieChart2.data = data
+        binding.pieChart2.centerTextRadiusPercent = 0f
+        binding.pieChart2.isDrawHoleEnabled = true
+        binding.pieChart2.legend.isEnabled = false
+        binding.pieChart2.description.isEnabled = true
 
 
 
