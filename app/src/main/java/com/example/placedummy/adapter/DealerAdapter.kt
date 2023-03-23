@@ -2,6 +2,7 @@ package com.example.placedummy.adapter
 
 import android.provider.ContactsContract
 import android.text.method.TextKeyListener.clear
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,11 +12,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.placedummy.R
 import com.example.placedummy.model.Dealer
 
-class DealerAdapter(private val list: List<Dealer>) :
+class DealerAdapter(var list: List<Dealer>) :
     RecyclerView.Adapter<DealerAdapter.ViewHolder>() {
 
-    val fullList = ArrayList<Dealer>()
-    val userList = ArrayList<Dealer>()
+    val fullList = ArrayList(list)
+    val userList = ArrayList(list)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView =
@@ -35,13 +36,20 @@ class DealerAdapter(private val list: List<Dealer>) :
     override fun getItemCount() = list.size
 
     fun filterlist(search: String) {
+        Log.e("search", search)
         userList.clear()
 
         for (item in fullList) {
 
-            if (item.name?.lowercase()?.contains(search.lowercase()) == true) {
+            if (item.name.lowercase().contains(search.lowercase()) == true) {
+
 
                 userList.add(item)
+                list = userList.toList()
+                Log.e("search2", userList.add(item).toString())
+
+
+
             }
         }
         notifyDataSetChanged()

@@ -269,25 +269,15 @@
                             android:textSize="18sp">
 
                         </EditText>
-                        <EditText
+
+                        <TextView
                             android:id="@+id/add_genger"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="8dp"
                             android:padding="8dp"
                             android:background="@color/color_editText"
-                            android:hint="gender"
-                            android:textSize="18sp">
-
-                        </EditText>
-                        <TextView
-                            android:id="@+id/add_isCreatedByEmployee"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="8dp"
-                            android:padding="8dp"
-                            android:background="@color/color_editText"
-                            android:text="Created By Employee"
+                            android:text="gender"
                             android:textSize="18sp">
 
                         </TextView>
@@ -298,19 +288,19 @@
                             android:gravity="center">
 
                             <RadioButton
-                                android:id="@+id/add_isCreatedByEmployee_yes"
+                                android:id="@+id/male"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="25dp"
-                                android:text="Yes">
+                                android:text="Male">
 
                             </RadioButton>
                             <RadioButton
-                                android:id="@+id/add_isCreatedByEmployee_no"
+                                android:id="@+id/female"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="25dp"
-                                android:text="No">
+                                android:text="Female">
 
                             </RadioButton>
                         </LinearLayout>
@@ -369,6 +359,7 @@
                             android:padding="8dp"
                             android:background="@color/color_editText"
                             android:hint="password"
+                            android:inputType="textPassword"
                             android:textSize="18sp">
 
                         </EditText>
@@ -380,6 +371,7 @@
                             android:padding="8dp"
                             android:background="@color/color_editText"
                             android:hint="phoneNumber1"
+                            android:inputType="phone"
                             android:textSize="18sp">
 
                         </EditText>
@@ -391,9 +383,23 @@
                             android:padding="8dp"
                             android:background="@color/color_editText"
                             android:hint="phoneNumber2"
+                            android:inputType="phone"
                             android:textSize="18sp">
 
                         </EditText>
+                        <EditText
+                            android:id="@+id/add_rePassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:inputType="textPassword"
+                            android:padding="8dp"
+                            android:background="@color/color_editText"
+                            android:hint="rePassword"
+                            android:textSize="18sp">
+
+                        </EditText>
+
                         <TextView
                             android:id="@+id/add_profileImagePath"
                             android:layout_width="match_parent"
@@ -405,17 +411,7 @@
                             android:textSize="18sp">
 
                         </TextView>
-                        <EditText
-                            android:id="@+id/add_rePassword"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="8dp"
-                            android:padding="8dp"
-                            android:background="@color/color_editText"
-                            android:hint="rePassword"
-                            android:textSize="18sp">
 
-                        </EditText>
 
                         <Button
                             android:id="@+id/btn_add_dealer"

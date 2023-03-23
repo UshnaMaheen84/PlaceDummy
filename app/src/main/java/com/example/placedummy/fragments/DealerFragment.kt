@@ -83,6 +83,7 @@ class DealerFragment : Fragment() {
     @RequiresApi(Build.VERSION_CODES.O)
     private fun addDealers() {
 
+        Log.e("logAddDealers","works")
         binding.dealerRecyclerview.visibility = View.GONE
         binding.deleteSubdealer.visibility = View.GONE
         binding.addDealersScroll.visibility = View.VISIBLE
@@ -117,13 +118,11 @@ class DealerFragment : Fragment() {
 //            getFileResult.launch(intent2)
 
         }
-        binding.addIsCreatedByEmployeeYes.setOnClickListener {
-            binding.addIsCreatedByEmployee.text = "yes"
-            CreatedByEmployee = true
+        binding.male.setOnClickListener {
+            binding.addGenger.text = "Male"
         }
-        binding.addIsCreatedByEmployeeNo.setOnClickListener {
-            binding.addIsCreatedByEmployee.text = "no"
-            CreatedByEmployee = false
+        binding.female.setOnClickListener {
+            binding.addGenger.text = "Female"
         }
         binding.addIsSubDealerYes.setOnClickListener {
             binding.addIsSubDealer.text = "yes"
@@ -139,43 +138,43 @@ class DealerFragment : Fragment() {
         binding.btnAddDealer.setOnClickListener {
             Log.e("log7", "works")
 
-            val address1 = binding.addAddress1.text.toString()
-            val address2 = binding.addAddress2.text.toString()
-            val cnic = binding.addCnic.text.toString()
-            val createdBy = binding.addCreatedby.text.toString()
-            val createdDate = date.toString()
-            val dataOfRegistration = date
+             val dealerId = binding.addDealerId.text.toString()
             val dealerCompanyId = binding.addDealerCompanyId.text.toString()
-            val dealerId = binding.addDealerId.text.toString()
-            val email = binding.addEmail.text.toString()
-            val gender = binding.addGenger.text.toString()
-            val isCreatedByEmployee = CreatedByEmployee
-            val isSubDealer = SubDealer
-            val modifiedBy = binding.addModifiedBy.text.toString()
-            val modifiedDate = date
-            val name = binding.addName.text.toString()
-            val password = binding.addPassword.text.toString()
-            val phoneNumber1 = binding.addPhoneNumber1.text.toString()
-            val phoneNumber2 = binding.addPhoneNumber2.text.toString()
-            val profileImagePath = "path"
-            val rePassword = binding.addRePassword.text.toString()
             val companyName = binding.addDcDealerCompany.text.toString()
             val dccompany = binding.addDcDealerCompany.text.toString()
+            val profileImagePath = "path"
+            val name = binding.addName.text.toString()
+            val email = binding.addEmail.text.toString()
+            val phoneNumber1 = binding.addPhoneNumber1.text.toString()
+            val phoneNumber2 = binding.addPhoneNumber2.text.toString()
+            val address1 = binding.addAddress1.text.toString()
+            val address2 = binding.addAddress2.text.toString()
+            val gender = binding.addGenger.text.toString()
+            val cnic = binding.addCnic.text.toString()
+            val password = binding.addPassword.text.toString()
+            val rePassword = binding.addRePassword.text.toString()
+            val passwordHash= binding.addPassword.text.toString()
+            val dataOfRegistration = date
+            val isSubDealer = SubDealer
+            val createdDate = date.toString()
+            val createdBy = binding.addCreatedby.text.toString()
+            val modifiedDate = date
+            val modifiedBy = binding.addModifiedBy.text.toString()
 
             Log.e("log8", "works")
+
+//            val data2 = AddDealerData(1, 1, "address2", "address2",
+//                profileImagePath, "ushna", "email", "phoneNumber1", "phoneNumber2",
+//                "address1", "address2", "gender", "cnic", "password", "rePassword",
+//                "2023-02-20T21:24:35.707", isSubDealer, "2023-02-20T21:24:35.707",
+//                isCreatedByEmployee, 1, "2023-02-20T21:24:35.707", 1)
 
             val data = AddDealerData(
                 1, 1, companyName, dccompany, profileImagePath,
                 name, email, phoneNumber1, phoneNumber2, address1, address2, gender, cnic,
-                password, rePassword, "2023-02-20T21:24:35.707", isSubDealer, "2023-02-20T21:24:35.707",
-                isCreatedByEmployee, 1, "2023-02-20T21:24:35.707", 1
+                password, rePassword, passwordHash ,
+                dataOfRegistration, isSubDealer, createdDate, 1, modifiedDate, 1
             )
-
-            val data2 = AddDealerData(1, 1, "address2", "address2",
-                profileImagePath, "ushna", "email", "phoneNumber1", "phoneNumber2",
-                "address1", "address2", "gender", "cnic", "password", "rePassword",
-                "2023-02-20T21:24:35.707", isSubDealer, "2023-02-20T21:24:35.707",
-                isCreatedByEmployee, 1, "2023-02-20T21:24:35.707", 1)
 
             val call = ApiClient.MyClientSingleton.getClient().addDealerData(data)
 
