@@ -88,12 +88,12 @@ class DealerFragment : Fragment() {
         binding.deleteSubdealer.visibility = View.GONE
         binding.addDealersScroll.visibility = View.VISIBLE
 
- //       val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
-        // val date = LocalDateTime.now().format(formatter).toString()
+       val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T' HH:mm:ss")
+         val date = LocalDateTime.now().format(formatter).toString()
 
-        val formatter = SimpleDateFormat("yyyy MM dd HH:mm:ss a")
-
-        val date = formatter.format(Date()).toString()
+//        val formatter = SimpleDateFormat("yyyy MM dd")
+//
+//        val date = formatter.format(Date()).toString()
 
 //
 //        val getFileResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
@@ -132,16 +132,24 @@ class DealerFragment : Fragment() {
             binding.addIsSubDealer.text = "no"
             SubDealer = false
         }
+        binding.addIsCreatedByEmployeeYes.setOnClickListener {
+            binding.addIsCreatedByEmployee.text="yes"
+            CreatedByEmployee= true
+        }
+        binding.addIsCreatedByEmployeeNo.setOnClickListener {
+            binding.addIsCreatedByEmployee.text="no"
+            CreatedByEmployee= false
+        }
 
 
 
         binding.btnAddDealer.setOnClickListener {
             Log.e("log7", "works")
 
-             val dealerId = binding.addDealerId.text.toString()
-            val dealerCompanyId = binding.addDealerCompanyId.text.toString()
-            val companyName = binding.addDcDealerCompany.text.toString()
-            val dccompany = binding.addDcDealerCompany.text.toString()
+            val dealerId = Integer.parseInt( binding.addDealerId.text.toString())
+            val dealerCompanyId =Integer.parseInt( binding.addDealerCompanyId.text.toString())
+            val dealerCompany= binding.addDealercompay.text.toString()
+            val dc_dealerCompany = binding.addDcdealerCompany.text.toString()
             val profileImagePath = "path"
             val name = binding.addName.text.toString()
             val email = binding.addEmail.text.toString()
@@ -153,27 +161,24 @@ class DealerFragment : Fragment() {
             val cnic = binding.addCnic.text.toString()
             val password = binding.addPassword.text.toString()
             val rePassword = binding.addRePassword.text.toString()
-            val passwordHash= binding.addPassword.text.toString()
+            val passwordHash = rePassword
             val dataOfRegistration = date
             val isSubDealer = SubDealer
             val createdDate = date.toString()
-            val createdBy = binding.addCreatedby.text.toString()
+            val isCreatedByEmployee= CreatedByEmployee
+            val createdBy = Integer.parseInt(binding.addCreatedby.text.toString())
             val modifiedDate = date
-            val modifiedBy = binding.addModifiedBy.text.toString()
+            val modifiedBy = Integer.parseInt( binding.addModifiedBy.text.toString())
 
             Log.e("log8", "works")
 
-//            val data2 = AddDealerData(1, 1, "address2", "address2",
-//                profileImagePath, "ushna", "email", "phoneNumber1", "phoneNumber2",
-//                "address1", "address2", "gender", "cnic", "password", "rePassword",
-//                "2023-02-20T21:24:35.707", isSubDealer, "2023-02-20T21:24:35.707",
-//                isCreatedByEmployee, 1, "2023-02-20T21:24:35.707", 1)
 
             val data = AddDealerData(
-                1, 1, companyName, dccompany, profileImagePath,
+                dealerId, dealerCompanyId, dealerCompany,dc_dealerCompany, profileImagePath,
                 name, email, phoneNumber1, phoneNumber2, address1, address2, gender, cnic,
-                password, rePassword, passwordHash ,
-                dataOfRegistration, isSubDealer, createdDate, 1, modifiedDate, 1
+                password, rePassword ,passwordHash,
+                dataOfRegistration, isSubDealer, createdDate,isCreatedByEmployee,createdBy,
+                modifiedDate, modifiedBy
             )
 
             val call = ApiClient.MyClientSingleton.getClient().addDealerData(data)
@@ -182,6 +187,10 @@ class DealerFragment : Fragment() {
                 override fun onResponse(call: Call<Int?>, response: Response<Int?>) {
 
                     Log.e("log9", name)
+                    val body= response.body()
+
+                    Log.e("LogRequest", data.toString())
+                    Log.e("logResponse", body.toString())
 
                     binding.addDealersScroll.visibility = View.GONE
                     binding.deleteSubdealer.visibility = View.VISIBLE
@@ -213,6 +222,7 @@ class DealerFragment : Fragment() {
                     val list = response.body()!!.dealers
                     adapter = DealerAdapter(list)
                     binding.dealerRecyclerview.layoutManager = LinearLayoutManager(context)
+                    binding.dealerRecyclerview.setHasFixedSize(true)
                     binding.dealerRecyclerview.adapter = adapter
 
                     binding.dealerSearch.setOnQueryTextListener(object :

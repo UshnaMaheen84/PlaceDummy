@@ -7,7 +7,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.scalars.ScalarsConverterFactory
 
-    const val BASEURL ="http://syedbrothers.tech/api/"
+    const val BASEURL ="http://api.jinnahbuildersandrealestate.com/api/"
 
 object ApiClient {
 

@@ -29,7 +29,7 @@ class DealerAdapter(var list: List<Dealer>) :
 
         val dealer = list[position]
         holder.name.text = dealer.name
-        userList.add(list[position])
+     //   userList.add(list[position])
     }
 
 
@@ -39,6 +39,7 @@ class DealerAdapter(var list: List<Dealer>) :
         Log.e("search", search)
         userList.clear()
 
+
         for (item in fullList) {
 
             if (item.name.lowercase().contains(search.lowercase()) == true) {
@@ -46,9 +47,11 @@ class DealerAdapter(var list: List<Dealer>) :
 
                 userList.add(item)
                 list = userList.toList()
+
                 Log.e("search2", userList.add(item).toString())
 
 
+                notifyDataSetChanged()
 
             }
         }

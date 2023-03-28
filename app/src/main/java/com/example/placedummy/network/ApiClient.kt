@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit
 
 class ApiClient {
     object MyClientSingleton {
-        const val BASEURL ="http://syedbrothers.tech/api/"
+        const val BASEURL ="http://api.jinnahbuildersandrealestate.com/api/"
 
         fun getClient(): ApiServices {
 
@@ -42,7 +42,7 @@ class ApiClient {
             builder.addInterceptor(interceptor)
 
             val client = builder.build()
-            var retrofit = Retrofit.Builder()
+            val retrofit = Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create(GsonBuilder().setLenient().create()))
                 .addConverterFactory(ScalarsConverterFactory.create())
                 .client(client)
