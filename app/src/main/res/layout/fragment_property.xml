@@ -313,7 +313,7 @@
                     </RelativeLayout>
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recycler"
+                        android:id="@+id/recycler_projects"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="8dp" />
@@ -322,15 +322,15 @@
 
                 </LinearLayout>
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:background="@drawable/button_background"
-                    android:padding="8dp"
-                    android:text="Show moore result"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"/>
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_margin="16dp"-->
+<!--                    android:background="@drawable/button_background"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:text="Show moore result"-->
+<!--                    android:textAllCaps="false"-->
+<!--                    android:textColor="@color/white"/>-->
             </LinearLayout>
         </ScrollView>
     </RelativeLayout>

@@ -2,6 +2,8 @@ package com.example.placedummy.api
 
 
 import com.example.placedummy.model.*
+import com.example.placedummy.model.forProject.Project
+import com.example.placedummy.model.forProject.ProjectX
 import com.google.gson.JsonElement
 import retrofit2.Call
 import retrofit2.Response
@@ -30,6 +32,10 @@ interface ApiServices {
     @POST("Dealer/DealerLogin")
     fun getData2(@Body hashmao:HashMap<String,String>) :Call<String>
 
-    @PUT("Dealer/AddDealerData")
+    @POST("Dealer/AddDealerData")
     fun addDealerData(@Body addOrUpdateDealerData: AddDealerData) :Call<Int>
+
+    @GET("Project")
+    fun getProjects() : Call<Project>
+
 }

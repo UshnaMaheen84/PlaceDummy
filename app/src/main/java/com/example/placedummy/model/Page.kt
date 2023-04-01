@@ -1,6 +1,6 @@
 package com.example.placedummy.model
 
-data class Page(
+data class Page (
     val action: String,
     val canCreate: Boolean,
     val canCreateEnable: Boolean,
@@ -18,4 +18,4 @@ data class Page(
     val pageID: Int,
     val pageName: String,
     val pageParentID: Int
-)
+        )

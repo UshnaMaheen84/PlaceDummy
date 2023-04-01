@@ -16,7 +16,7 @@ class DealerAdapter(var list: List<Dealer>) :
     RecyclerView.Adapter<DealerAdapter.ViewHolder>() {
 
     val fullList = ArrayList(list)
-    val userList = ArrayList(list)
+     val userList = ArrayList(list)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView =
@@ -27,33 +27,35 @@ class DealerAdapter(var list: List<Dealer>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        val dealer = list[position]
+        val dealer = userList[position]
         holder.name.text = dealer.name
      //   userList.add(list[position])
     }
 
 
-    override fun getItemCount() = list.size
+    override fun getItemCount() = userList.size
 
     fun filterlist(search: String) {
         Log.e("search", search)
         userList.clear()
 
+        list.toMutableList().clear()
 
         for (item in fullList) {
 
-            if (item.name.lowercase().contains(search.lowercase()) == true) {
+            if (item.name.lowercase().contains(search.lowercase())) {
 
 
-                userList.add(item)
-                list = userList.toList()
+//                userList.add(item)
+                //list = userList.toList()
+                list.toMutableList().add(item)
 
                 Log.e("search2", userList.add(item).toString())
 
 
-                notifyDataSetChanged()
 
-            }
+
+           }
         }
         notifyDataSetChanged()
     }

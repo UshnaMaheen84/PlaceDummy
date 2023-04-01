@@ -164,6 +164,7 @@
                                 android:padding="8dp"
                                 android:background="@color/color_editText"
                                 android:inputType="number"
+                                android:text="1"
                                 android:hint="dealer Id"
                                 android:textSize="18sp">
 
@@ -177,6 +178,7 @@
                                 android:inputType="number"
                                 android:background="@color/color_editText"
                                 android:hint="dealerCompanyId"
+                                android:text="1"
                                 android:textSize="18sp">
 
                             </EditText>
@@ -190,6 +192,7 @@
                                 android:background="@color/color_editText"
                                 android:inputType="text"
                                 android:hint="dealer company"
+                                android:text="Ameer hamza"
                                 android:textSize="18sp">
 
                             </EditText>
@@ -202,6 +205,7 @@
                                 android:inputType="text"
                                 android:background="@color/color_editText"
                                 android:hint="dcDealer Company"
+                                android:text=""
                                 android:textSize="18sp">
 
                             </EditText>
@@ -214,6 +218,7 @@
                                 android:padding="8dp"
                                 android:background="@color/color_editText"
                                 android:hint="name"
+                                android:text="new name"
                                 android:textSize="18sp">
 
                             </EditText>
@@ -226,6 +231,8 @@
                                 android:padding="8dp"
                                 android:background="@color/color_editText"
                                 android:hint="email"
+                                android:text="usamanew@gmail.com"
+
                                 android:textSize="18sp">
 
                             </EditText>
@@ -239,6 +246,7 @@
                                 android:background="@color/color_editText"
                                 android:hint="phoneNumber1"
                                 android:inputType="phone"
+                                android:text="03444444441"
                                 android:textSize="18sp">
 
                             </EditText>
@@ -251,6 +259,7 @@
                                 android:background="@color/color_editText"
                                 android:hint="phoneNumber2"
                                 android:inputType="phone"
+                                android:text="1234567"
                                 android:textSize="18sp">
 
                             </EditText>
@@ -264,6 +273,8 @@
                                 android:padding="8dp"
                                 android:background="@color/color_editText"
                                 android:hint="address 1"
+                                android:text="house1"
+
                                 android:textSize="18sp"/>
 
 
@@ -275,6 +286,7 @@
                                 android:padding="8dp"
                                 android:background="@color/color_editText"
                                 android:hint="address2"
+                                android:text="house2"
                                 android:textSize="18sp">
 
                             </EditText>
@@ -321,6 +333,8 @@
                                 android:padding="8dp"
                                 android:background="@color/color_editText"
                                 android:hint="CNIC"
+                                android:text="42101-4444444-7"
+
                                 android:textSize="18sp">
 
                             </EditText>
@@ -334,6 +348,7 @@
                                 android:background="@color/color_editText"
                                 android:hint="password"
                                 android:inputType="textPassword"
+                                android:text="123345"
                                 android:textSize="18sp">
 
                             </EditText>
@@ -347,6 +362,8 @@
                                 android:padding="8dp"
                                 android:background="@color/color_editText"
                                 android:hint="rePassword"
+                                android:text="123345"
+
                                 android:textSize="18sp">
 
                             </EditText>
@@ -431,6 +448,7 @@
                                 android:padding="8dp"
                                 android:background="@color/color_editText"
                                 android:hint="created by"
+                                android:text="1"
                                 android:inputType="number"
                                 android:textSize="18sp">
 
@@ -444,6 +462,7 @@
                                 android:padding="8dp"
                                 android:background="@color/color_editText"
                                 android:hint="modifiedBy"
+                                android:text="1"
                                 android:inputType="number"
                                 android:textSize="18sp">
 
@@ -462,7 +481,7 @@
                             </TextView>
 
 
-                            <Button
+                                <Button
                                 android:id="@+id/btn_add_dealer"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"

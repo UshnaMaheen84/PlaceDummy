@@ -14,6 +14,7 @@
           <stringArguments>
             <stringArg name="classpath">
               <args>
+                <arg>$MODULE_DIR$/../../../app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/ee9e41f895fed1c1e915f6e0c5f49cf6/transformed/jetified-CountryCodePicker-1.0.2-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/b452296049c49df2a0ad3fe2cffb9363/transformed/jetified-viewbinding-7.3.1-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/cd78f50fd919aacef3cffb1c9c750b4f/transformed/jetified-logging-interceptor-5.0.0-alpha.2.jar</arg>

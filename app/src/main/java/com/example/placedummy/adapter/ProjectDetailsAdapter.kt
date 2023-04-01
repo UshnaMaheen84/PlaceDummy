@@ -8,8 +8,11 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.placedummy.R
+import com.example.placedummy.model.forProject.Project
+import com.example.placedummy.model.forProject.ProjectPropertyType
+import com.example.placedummy.model.forProject.ProjectX
 
-class ProjectDetailsAdapter : RecyclerView.Adapter<ProjectDetailsAdapter.ViewHolder>() {
+class ProjectDetailsAdapter (val list: List<ProjectX>): RecyclerView.Adapter<ProjectDetailsAdapter.ViewHolder>() {
 
 
 
@@ -19,26 +22,20 @@ class ProjectDetailsAdapter : RecyclerView.Adapter<ProjectDetailsAdapter.ViewHol
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        TODO("Not yet implemented")
+
+        val item= list[position]
+        holder.property_name.text= item.name
+        holder.property_area.text= item.totalsize.toString()
+        holder.property_loc.text= item.address
+
+
+
+
+
     }
 
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
-    }
+    override fun getItemCount()= list.size
 
-//    fun filterlist(search: String){
-//        NoteList.clear()
-//
-//        for (item in fullList){
-//
-//            if (item.title?.lowercase()?.contains(search.lowercase())== true ||
-//                item.note?.lowercase()?.contains(search.lowercase())== true){
-//
-//                NoteList.add(item)
-//            }
-//        }
-//        notifyDataSetChanged()
-//    }
 
     class ViewHolder (itemview : View): RecyclerView.ViewHolder(itemview){
         val cardView: CardView= itemview.findViewById(R.id.property_cardview1)

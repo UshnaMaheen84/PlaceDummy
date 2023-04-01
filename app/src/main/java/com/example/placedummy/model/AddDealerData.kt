@@ -4,7 +4,7 @@ data class AddDealerData(
     val dealerId: Int,
     val dealerCompanyId: Int,
     val dealerCompany :String,
-    val dcDealerCompany: String,
+    val dcDealerCompany: String?=null,
     val profileImagePath: Any,
     val name: String,
     val email: String,
@@ -16,12 +16,10 @@ data class AddDealerData(
     val cnic: String,
     val password: String,
     val rePassword: String,
-    val passwordHash : String,
-    val dataOfRegistration: String,
-    val isSubDealer: Boolean,
-    val createdDate: String,
-    val isCreatedByEmployee : Boolean,
-    val createdBy: Int,
-    val modifiedDate: String,
-    val modifiedBy: Int
+    val isSubDealer: Boolean?=false,
+    val createdDate: String? =null,
+    val isCreatedByEmployee : Boolean? = false,
+    val createdBy: Int?=null,
+    val modifiedDate: String?=null,
+    val modifiedBy: Int?=null
     )
